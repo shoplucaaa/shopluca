@@ -1,13 +1,19 @@
-<!DOCTYPE html>
 <html>
 <head>
 <style>
-table {
+
+
+table.login {
+	position: absolute;
 	padding: 1em;
 	border: 1px solid green;
 	width: 80%;
 	overflow: scroll;
 	margin: auto;
+	border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 input {
@@ -25,17 +31,39 @@ table td {
 
 .btn-submit {
 	margin: auto;
+	font-size: 1.2em;
 	background-color: #4CAF50;
+	color: white;
+	padding: 15px 30px;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	opacity: 0.9;
+	border-radius: 6px;
+}
+
+.btn-submit:hover {
+	background-color: green;
+}
+
+.back {
+	margin: auto;
+	background-color: #6b6861;
 	color: white;
 	padding: 10px 30px;
 	border: none;
 	cursor: pointer;
 	width: auto;
 	opacity: 0.9;
+	border-radius: 6px;
 }
 
-.btn-submit:hover {
-	background-color: green;
+.back:hover {
+	background-color: grey;
+}
+
+.back a{
+	color: inherit;
 }
 
 .result {
@@ -49,7 +77,7 @@ table td {
 <body>
 
 
-	<table>
+	<table class="login">
 		<form name="myform" method="post" action="#"
 			onsubmit="return validateform()">
 			<tr>
@@ -80,11 +108,13 @@ table td {
 			<tr>
 				<td class="sendbutton" colspan="2">
 					<button type="submit" id="btn-submit" class="btn-submit">
-						Send</button>
+						Dang nhap</button>
 				</td>
 			</tr>
 			<tr>
-					<td><a href="/" target="self"> Tro ve </a></td>
+				<td colspan="2">
+					<button class="back"><a href="/" class="btn btn-primary">Tro ve</a></button>
+				</td>
 			</tr>
 		</form>
 	</table>
@@ -134,4 +164,4 @@ table td {
 		}
 	</script>
 </body>
-</html>
+<html>
