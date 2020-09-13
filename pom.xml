@@ -3,7 +3,10 @@
   <groupId>Shopluka</groupId>
   <artifactId>Shopluka</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+ 
+          <name>Dummy name</name>
+        <description>Dummy war</description>
+        <url>http://maven.apache.org</url>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
