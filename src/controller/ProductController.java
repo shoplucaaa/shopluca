@@ -74,7 +74,7 @@ public class ProductController {
 						}
 					}					
 				} else {
-					String filename = item.getName(); // TÃªn file
+					String filename = item.getName();  
 					if (!filename.isEmpty()) {
 						String serverPath = request.getServletContext().getRealPath("public/images");
 						System.out.println("Realpath: " + serverPath);
