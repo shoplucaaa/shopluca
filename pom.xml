@@ -11,7 +11,7 @@
     <sourceDirectory>src</sourceDirectory>
     <plugins>
 	    
-	    <plugins>
+
 <plugin>
 <groupId>org.Apache.maven.plugins</groupId>
 <artifactId>maven-compiler-plugin</artifactId>
@@ -20,7 +20,6 @@
 <release>9.0.4</release>
 </configuration>
 </plugin>
-</plugins>
 
 
       <plugin>
