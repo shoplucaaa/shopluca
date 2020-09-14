@@ -32,7 +32,10 @@ public class ProductDAOimpl implements ProductDAO {
 		Session ss = sessionFactory.openSession();  
 		try {
 			ss.beginTransaction();  
+			
 			List list = ss.createQuery("from Product").list(); 
+		
+			
 			ss.getTransaction().commit();  
 			ss.close();
 			return list;

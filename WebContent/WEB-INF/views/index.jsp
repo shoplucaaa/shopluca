@@ -15,37 +15,37 @@
 	<!-- Title Tag  -->
     <title>${system_name}</title>
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="icon" type="image/png" href="<c:url value="/views/images/favicon.png"></c:url>">
 	<!-- Web Font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 	
 	<!-- StyleSheet -->
 	
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="<c:url value="/views/css/bootstrap.css"></c:url>">
 	<!-- Magnific Popup -->
-    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" href="<c:url value="/views/css/magnific-popup.min.css"></c:url>">
 	<!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="<c:url value="/views/css/font-awesome.css"></c:url>">
 	<!-- Fancybox -->
-	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="<c:url value="/views/css/jquery.fancybox.min.css"></c:url>">
 	<!-- Themify Icons -->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="<c:url value="/views/css/themify-icons.css"></c:url>">
 	<!-- Nice Select CSS -->
-    <link rel="stylesheet" href="css/niceselect.css">
+    <link rel="stylesheet" href="<c:url value="/views/css/niceselect.css"></c:url>">
 	<!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="<c:url value="/views/css/animate.css"></c:url>">
 	<!-- Flex Slider CSS -->
-    <link rel="stylesheet" href="css/flex-slider.min.css">
+    <link rel="stylesheet" href="<c:url value="/views/css/flex-slider.min.css"></c:url>">
 	<!-- Owl Carousel -->
-    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="<c:url value="/views/css/owl-carousel.css"></c:url>">
 	<!-- Slicknav -->
-    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link rel="stylesheet" href="<c:url value="/views/css/slicknav.min.css"></c:url>">
 	
 	<!-- Eshop StyleSheet -->
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="<c:url value="/views/css/reset.css"></c:url>">
+	<link rel="stylesheet" href="<c:url value="/views/style.css"></c:url>">
+    <link rel="stylesheet" href="<c:url value="/views/css/responsive.css"></c:url>">
 
 	
 	
@@ -189,12 +189,12 @@
 							<div class="nav-main">
 								<!-- Tab Nav -->
 								<ul class="nav nav-tabs" id="myTab" role="tablist">
-									<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">All</a></li>
-									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">Woman</a></li>
+									<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#kids" role="tab">All</a></li>
+									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#woman" role="tab">Woman</a></li>
 									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">Kids</a></li>
-									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#accessories" role="tab">Accessories</a></li>
+									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mans" role="tab">Accessories</a></li>
 									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#essential" role="tab">Essential</a></li>
-									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#prices" role="tab">Prices</a></li>
+									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#man" role="tab">Prices</a></li>
 								</ul>
 								<!--/ End Tab Nav -->
 							</div>
@@ -208,14 +208,14 @@
 												<div class="single-product">
 													<div class="product-img">
 														<a data-toggle="modal" data-target="#${s.id}" title="Quick View" href="#">
-															<img class="default-img" src="public/images/${s.image}" alt="#">
-															<img class="hover-img" src="public/images/${s.image}" alt="#">
+															<img class="default-img" src="<c:url value="/public/images/${s.image}"></c:url>" alt="#">
+															<img class="hover-img" src="<c:url value="/public/images/${s.image}"></c:url>" alt="#">
 															<span class="out-of-stock">Hot</span> <!-- <span class="price-dec">30% Off</span> <span class="out-of-stock">Hot</span> -->
 														</a>
 														<div class="button-head">
 												
 															<div class="product-action-2">
-																<a title="Add to cart" data-toggle="modal" data-target="#Modal1" title="Quick View" href="#">Click for more info</a>
+																<a title="Add to cart" data-toggle="modal" data-target="#${s.id}" title="Quick View" href="#">Click for more info</a>
 															</div>
 														</div>
 													</div>
@@ -1379,7 +1379,7 @@
     </div>
 	<!-- End Product Area -->
 	
-
+
 	
 
 	
@@ -1399,7 +1399,7 @@
 								<p class="small-title">Deal of day</p>
 								<h3 class="title">Beatutyful dress for women</h3>
 								<p class="text">Suspendisse massa leo, vestibulum cursus nulla sit amet, frungilla placerat lorem. Cars fermentum, sapien. </p>
-								<h1 class="price">$1200 <s>$1890</s></h1>
+								<h1 class="price">$1200 </h1>
 								<div class="coming-time">
 									<div class="clearfix" data-countdown="2021/02/30"></div>
 								</div>
@@ -1470,7 +1470,7 @@
 							<h4>Newsletter</h4>
 							<p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
 							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-								<input name="EMAIL" placeholder="Your email address" required="" type="email">
+								<input name="EMAIL" placeholder="Your email address" type="email">
 								<button class="btn">Subscribe</button>
 							</form>
 						</div>
@@ -1588,7 +1588,7 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-								<a href="index.html"><img src="images/logo2.png" alt="#"></a>
+								<a href="index.html"><img src="/views/images/logo2.png" alt="#"></a>
 							</div>
 							<p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue,  magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
 							<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456 789</a></span></p>
@@ -1647,7 +1647,7 @@
 						</div>
 						<div class="col-lg-6 col-12">
 							<div class="right">
-								<img src="images/payments.png" alt="#">
+								<img src="/views/images/payments.png" alt="#">
 							</div>
 						</div>
 					</div>
@@ -1658,36 +1658,36 @@
 	<!-- /End Footer Area -->
  
 	<!-- Jquery -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
+    <script src="<c:url value="/views/js/jquery.min.js"></c:url>"></script>
+    <script src="<c:url value="/views/js/jquery-migrate-3.0.0.js"></c:url>"></script>
+	<script src="<c:url value="/views/js/jquery-ui.min.js"></c:url>"></script>
 	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
+	<script src="<c:url value="/views/js/popper.min.js"></c:url>"></script>
 	<!-- Bootstrap JS -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="<c:url value="/views/js/bootstrap.min.js"></c:url>"></script>
 	<!-- Color JS -->
-	<script src="js/colors.js"></script>
+	<script src="<c:url value="/views/js/colors.js"></c:url>"></script>
 	<!-- Slicknav JS -->
-	<script src="js/slicknav.min.js"></script>
+	<script src="<c:url value="/views/js/slicknav.min.js"></c:url>"></script>
 	<!-- Owl Carousel JS -->
-	<script src="js/owl-carousel.js"></script>
+	<script src="<c:url value="/views/js/owl-carousel.js"></c:url>"></script>
 	<!-- Magnific Popup JS -->
-	<script src="js/magnific-popup.js"></script>
+	<script src="<c:url value="/views/js/magnific-popup.js"></c:url>"></script>
 	<!-- Waypoints JS -->
-	<script src="js/waypoints.min.js"></script>
+	<script src="<c:url value="/views/js/waypoints.min.js"></c:url>"></script>
 	<!-- Countdown JS -->
-	<script src="js/finalcountdown.min.js"></script>
+	<script src="<c:url value="/views/js/finalcountdown.min.js"></c:url>"></script>
 	<!-- Nice Select JS -->
-	<script src="js/nicesellect.js"></script>
+	<script src="<c:url value="/views/js/nicesellect.js"></c:url>"></script>
 	<!-- Flex Slider JS -->
-	<script src="js/flex-slider.js"></script>
+	<script src="<c:url value="/views/js/flex-slider.js"></c:url>"></script>
 	<!-- ScrollUp JS -->
-	<script src="js/scrollup.js"></script>
+	<script src="<c:url value="/views/js/scrollup.js"></c:url>"></script>
 	<!-- Onepage Nav JS -->
-	<script src="js/onepage-nav.min.js"></script>
+	<script src="<c:url value="/views/js/onepage-nav.min.js"></c:url>"></script>
 	<!-- Easing JS -->
-	<script src="js/easing.js"></script>
+	<script src="<c:url value="/views/js/easing.js"></c:url>"></script>
 	<!-- Active JS -->
-	<script src="js/active.js"></script>
+	<script src="<c:url value="/views/js/active.js"></c:url>"></script>
 </body>
 </html>

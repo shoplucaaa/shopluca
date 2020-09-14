@@ -81,6 +81,8 @@
  	</bean>
 	
 	<mvc:resources mapping="/public/**" location="/public/" ></mvc:resources>
+	
+	<mvc:resources mapping="/views/**" location="/WEB-INF/views/" ></mvc:resources>
 
 	<!-- Khai báo package chứa các controller (điều hướng) -->
 	<context:component-scan

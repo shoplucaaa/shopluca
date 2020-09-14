@@ -39,7 +39,7 @@ public class Product {
 	@Column(name = "likecount")
 	private int likecount;
 	
-	@Column(name = "update")
+	@Column(name = "pupdate")
 	private Date update;
 
 	public Product() {

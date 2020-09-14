@@ -29,14 +29,14 @@ public class MainController {
 	public String index(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
 		
 		
-		System.out.println("reuqested");
+	
 		
-		request.getSession().setAttribute("system_name", "online BKACAD");
+		request.getSession().setAttribute("system_name", "system name");
 
-		m.addAttribute("yourname", "Victor Minh");
+		m.addAttribute("yourname", "Name");
 
 
-		clr.setLocale(request, response, new Locale("vi"));
+//		clr.setLocale(request, response, new Locale("vi"));
 
 		List<Product> list = productDAO.selectAll();
 		m.addAttribute("list", list);
