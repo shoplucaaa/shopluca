@@ -32,7 +32,7 @@
 </configuration>
 </plugin> -->
 
-	            <!--    <plugin>
+	               <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
                         <version>3.6.2</version>
@@ -44,7 +44,7 @@
                    <source>1.8</source>
                    <target>1.8</target>
                  </configuration>
-             </plugin> -->
+             </plugin> 
 
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
@@ -150,13 +150,13 @@
 </dependency >-->
 		
 		
-		<dependency>     <groupId>com.apple</groupId>     <artifactId>AppleJavaExtensions</artifactId>     <version>1.4</version> </dependency>
+		<!--<dependency>     <groupId>com.apple</groupId>     <artifactId>AppleJavaExtensions</artifactId>     <version>1.4</version> </dependency> -->
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-<dependency>
+<!-- <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-jdbc</artifactId>
     <version>5.2.8.RELEASE</version>
-</dependency> 
+</dependency> -->
 
 
 		
