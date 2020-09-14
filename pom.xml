@@ -12,15 +12,28 @@
     <plugins>
 	    
 
-<plugin>
+<--! <plugin>
 <groupId>org.Apache.maven.plugins</groupId>
 <artifactId>maven-compiler-plugin</artifactId>
 <version>3.8.1</version>
 <configuration>
 <release>9.0.4</release>
 </configuration>
-</plugin>
+</plugin> -->
 
+	                <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.8.1</version>
+                <configuration>
+                      <verbose>true</verbose>
+                      <fork>true</fork>
+                      <executable>${java.home}</executable>
+                   <compilerVersion>1.8</compilerVersion>
+                   <source>1.8</source>
+                   <target>1.8</target>
+                 </configuration>
+             </plugin>
 
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
