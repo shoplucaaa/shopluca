@@ -176,11 +176,11 @@
 </dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-<!-- <dependency>
+ <dependency>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.6.2</version>
-</dependency >-->
+</dependency>
 		
 		
 		<!--<dependency>     <groupId>com.apple</groupId>     <artifactId>AppleJavaExtensions</artifactId>     <version>1.4</version> </dependency> -->
