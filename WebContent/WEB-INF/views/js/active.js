@@ -39,7 +39,7 @@ Version:1.0
 		======================================*/ 	
 		$('.menu').slicknav({
 			prependTo:".mobile-nav",
-			duration:300,
+			duration:200,
 			animateIn: 'fadeIn',
 			animateOut: 'fadeOut',
 			closeOnClick:true,
@@ -49,7 +49,7 @@ Version:1.0
 		03. Sticky Header JS
 		======================================*/ 
 		jQuery(window).on('scroll', function() {
-			if ($(this).scrollTop() > 200) {
+			if ($(this).scrollTop() > 100) {
 				$('.header').addClass("sticky");
 			} else {
 				$('.header').removeClass("sticky");
@@ -315,10 +315,10 @@ Version:1.0
 	  Preloader JS
 	======================================*/ 	
 	//After 2s preloader is fadeOut
-	$('.preloader').delay(2000).fadeOut('slow');
+	$('.preloader').delay(400).fadeOut('slow');
 	setTimeout(function() {
 	//After 2s, the no-scroll class of the body will be removed
 	$('body').removeClass('no-scroll');
-	}, 2000); //Here you can change preloader time
+	}, 400); //Here you can change preloader time
 	 
 })(jQuery);

@@ -25,6 +25,27 @@ public class MainController {
 		this.productDAO = productDAO;
 	}
 	
+	@RequestMapping("/product")
+	public String product(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
+		
+		
+	
+		
+		request.getSession().setAttribute("system_name", "system name");
+
+		m.addAttribute("yourname", "Name");
+
+
+//		clr.setLocale(request, response, new Locale("vi"));
+
+		List<Product> list = productDAO.selectAll();
+		m.addAttribute("list", list);
+		
+	return "product";
+	
+	
+}
+	
 	@RequestMapping("/index")
 	public String index(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
 		
@@ -41,8 +62,6 @@ public class MainController {
 		List<Product> list = productDAO.selectAll();
 		m.addAttribute("list", list);
 		
-	return "index";
-	
-	
+	return "index";	
 }
 }

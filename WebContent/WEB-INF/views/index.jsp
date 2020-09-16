@@ -81,8 +81,8 @@
 										<div class="nav-inner">	
 											<ul class="nav main-menu menu navbar-nav">
 													<li class="active"><a href="#">Home</a></li>
-													<li><a href="product.html">Product<span class="new">New</span></a></li>												
-													<li><a href="contact.html">Contact Us</a></li>
+													<li><a href="product">Product<span class="new">New</span></a></li>												
+													<li><a href="contact">Contact Us</a></li>
 												</ul>
 										</div>
 									</div>
@@ -189,7 +189,8 @@
 							<div class="nav-main">
 								<!-- Tab Nav -->
 								<ul class="nav nav-tabs" id="myTab" role="tablist">
-									<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#kids" role="tab">All</a></li>
+									<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#*" role="tab">All</a></li>
+									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">All</a></li>
 									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#woman" role="tab">Woman</a></li>
 									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">Kids</a></li>
 									<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mans" role="tab">Accessories</a></li>
@@ -200,7 +201,7 @@
 							</div>
 							<div class="tab-content" id="myTabContent">
 								<!-- Start Single Tab -->
-								<div class="tab-pane fade show active" id="man" role="tabpanel">
+								<div class="tab-pane fade show active"  id="man" role="tabpanel">
 									<div class="tab-single">
 										<div class="row">
 										<c:forEach items="${list}" var="s">
@@ -1493,7 +1494,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="row no-gutters">
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                                 <!-- Product Slider -->
 									<div class="product-gallery">
 										<div class="quickview-slider-active">
@@ -1513,7 +1514,7 @@
 									</div>
 								<!-- End Product slider -->
                             </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                                 <div class="quickview-content">
                                     <h2>${s.name}</h2>
                                     <div class="quickview-ratting-review">

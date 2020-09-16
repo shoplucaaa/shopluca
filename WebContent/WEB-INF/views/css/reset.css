@@ -264,7 +264,7 @@ big {
 	color: #666;
 }
 .container{
-	max-width:1170px;
+	max-width:2170px;
 }
 .overlay{
 	position:relative
@@ -1042,10 +1042,11 @@ object {
 
 /* Start Modal Css */
 .modal-dialog .quickview-slider-active{
+	margin: auto;
 	display:block;
 	height:100%;
-	width:100%;  /*<width: 550px;   Nam Nam*/
-	height:100%; 
+	width: 550px;
+	height:100%;
 }
 .modal-dialog .quickview-slider-active img{
 	display:inline-block;
@@ -1072,15 +1073,15 @@ object {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .modal-dialog {
-    width: 960px;
-    max-width: 960px;
+    width: 920px;
+    max-width: 920px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .modal-dialog {
-    width: 720px;
-    max-width: 720px;
+    width: 750px;
+    max-width: 750px;
   }
 }
 
@@ -1088,7 +1089,7 @@ object {
   .modal-dialog {
     width: 100%;
     max-width: 100%;
-    padding: 35px 0;
+    padding: 35px 35px;
   }
 }
 
@@ -1097,6 +1098,7 @@ object {
 }
 
 .modal-dialog .modal-content .modal-header {
+	margin-right: 20px;
 	border: none;
 	padding: 0;
 	right: 10px;
@@ -1112,6 +1114,7 @@ object {
   }
 }
 .modal-dialog .modal-content .modal-header .close {
+	
 	color: #fff;
 	cursor: pointer;
 	opacity: 1;
@@ -1147,8 +1150,8 @@ object {
 .modal-dialog .modal-content .modal-body {
 	padding: 0px;
 	overflow-y: auto;
-	max-height: 510px;
-	height: 700px;
+	max-height: 80vh;
+	/* height: 700px; */
 }
 .quickview-content {
 	padding: 40px 40px;

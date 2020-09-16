@@ -140,31 +140,31 @@ table, th, td {
 
 <!-- StyleSheet -->
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<!-- Magnific Popup -->
-<link rel="stylesheet" href="css/magnific-popup.min.css">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="css/font-awesome.css">
-<!-- Fancybox -->
-<link rel="stylesheet" href="css/jquery.fancybox.min.css">
-<!-- Themify Icons -->
-<link rel="stylesheet" href="css/themify-icons.css">
-<!-- Nice Select CSS -->
-<link rel="stylesheet" href="css/niceselect.css">
-<!-- Animate CSS -->
-<link rel="stylesheet" href="css/animate.css">
-<!-- Flex Slider CSS -->
-<link rel="stylesheet" href="css/flex-slider.min.css">
-<!-- Owl Carousel -->
-<link rel="stylesheet" href="css/owl-carousel.css">
-<!-- Slicknav -->
-<link rel="stylesheet" href="css/slicknav.min.css">
-
-<!-- Eshop StyleSheet -->
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="css/responsive.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="<c:url value="/views/css/bootstrap.css"></c:url>">
+	<!-- Magnific Popup -->
+    <link rel="stylesheet" href="<c:url value="/views/css/magnific-popup.min.css"></c:url>">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="<c:url value="/views/css/font-awesome.css"></c:url>">
+	<!-- Fancybox -->
+	<link rel="stylesheet" href="<c:url value="/views/css/jquery.fancybox.min.css"></c:url>">
+	<!-- Themify Icons -->
+    <link rel="stylesheet" href="<c:url value="/views/css/themify-icons.css"></c:url>">
+	<!-- Nice Select CSS -->
+    <link rel="stylesheet" href="<c:url value="/views/css/niceselect.css"></c:url>">
+	<!-- Animate CSS -->
+    <link rel="stylesheet" href="<c:url value="/views/css/animate.css"></c:url>">
+	<!-- Flex Slider CSS -->
+    <link rel="stylesheet" href="<c:url value="/views/css/flex-slider.min.css"></c:url>">
+	<!-- Owl Carousel -->
+    <link rel="stylesheet" href="<c:url value="/views/css/owl-carousel.css"></c:url>">
+	<!-- Slicknav -->
+    <link rel="stylesheet" href="<c:url value="/views/css/slicknav.min.css"></c:url>">
+	
+	<!-- Eshop StyleSheet -->
+	<link rel="stylesheet" href="<c:url value="/views/css/reset.css"></c:url>">
+	<link rel="stylesheet" href="<c:url value="/views/style.css"></c:url>">
+    <link rel="stylesheet" href="<c:url value="/views/css/responsive.css"></c:url>">
 
 
 
@@ -252,18 +252,7 @@ table, th, td {
 							<td>${s.description}</td>
 						</tr>
 					</c:forEach>
-					<tr>
-						<td>02</td>
-						<td>Fuhlen</td>
-						<td>Chuot</td>
-						<td>100000</td>
-						<td>Con hang</td>
-						<td><img class="prodimg"
-							src="https://png.pngitem.com/pimgs/s/44-448588_symbol-circle-black-computer-mouse-clipart-hd-png.png"
-							alt="HTML tutorial" style="width: 42px; height: 42px;"></td>
-						<td>Hang Viet Nam chat luong Cao</td>
-					</tr>
-
+					
 
 
 				</tbody>
@@ -372,37 +361,37 @@ table, th, td {
 
 
 	<!-- Jquery -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.0.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
+    <script src="<c:url value="/views/js/jquery.min.js"></c:url>"></script>
+    <script src="<c:url value="/views/js/jquery-migrate-3.0.0.js"></c:url>"></script>
+	<script src="<c:url value="/views/js/jquery-ui.min.js"></c:url>"></script>
 	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
+	<script src="<c:url value="/views/js/popper.min.js"></c:url>"></script>
 	<!-- Bootstrap JS -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="<c:url value="/views/js/bootstrap.min.js"></c:url>"></script>
 	<!-- Color JS -->
-	<script src="js/colors.js"></script>
+	<script src="<c:url value="/views/js/colors.js"></c:url>"></script>
 	<!-- Slicknav JS -->
-	<script src="js/slicknav.min.js"></script>
+	<script src="<c:url value="/views/js/slicknav.min.js"></c:url>"></script>
 	<!-- Owl Carousel JS -->
-	<script src="js/owl-carousel.js"></script>
+	<script src="<c:url value="/views/js/owl-carousel.js"></c:url>"></script>
 	<!-- Magnific Popup JS -->
-	<script src="js/magnific-popup.js"></script>
+	<script src="<c:url value="/views/js/magnific-popup.js"></c:url>"></script>
 	<!-- Waypoints JS -->
-	<script src="js/waypoints.min.js"></script>
+	<script src="<c:url value="/views/js/waypoints.min.js"></c:url>"></script>
 	<!-- Countdown JS -->
-	<script src="js/finalcountdown.min.js"></script>
+	<script src="<c:url value="/views/js/finalcountdown.min.js"></c:url>"></script>
 	<!-- Nice Select JS -->
-	<script src="js/nicesellect.js"></script>
+	<script src="<c:url value="/views/js/nicesellect.js"></c:url>"></script>
 	<!-- Flex Slider JS -->
-	<script src="js/flex-slider.js"></script>
+	<script src="<c:url value="/views/js/flex-slider.js"></c:url>"></script>
 	<!-- ScrollUp JS -->
-	<script src="js/scrollup.js"></script>
+	<script src="<c:url value="/views/js/scrollup.js"></c:url>"></script>
 	<!-- Onepage Nav JS -->
-	<script src="js/onepage-nav.min.js"></script>
+	<script src="<c:url value="/views/js/onepage-nav.min.js"></c:url>"></script>
 	<!-- Easing JS -->
-	<script src="js/easing.js"></script>
+	<script src="<c:url value="/views/js/easing.js"></c:url>"></script>
 	<!-- Active JS -->
-	<script src="js/active.js"></script>
+	<script src="<c:url value="/views/js/active.js"></c:url>"></script>
 	<script>
 		function readURL(input) {
 			if (input.files && input.files[0]) {

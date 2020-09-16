@@ -523,7 +523,7 @@ Version:1.0
 	display: none;
 }
 .header .header-inner{
-	display:none 
+	
 }
 .hero-slider {
 	height: 350px;
@@ -1021,7 +1021,7 @@ Version:1.0
 	padding:20px 0;
 }
 .modal-dialog .quickview-slider-active {
-	display: none;
+	
 }
 .modal-dialog .modal-content .modal-header {
 	right: 15px;
@@ -1255,7 +1255,7 @@ Version:1.0
 	display: none;
 }
 .header .header-inner{
-	display:none 
+	
 }
 .header.shop .nav li .new {
 	display:none !important;
@@ -1473,7 +1473,7 @@ Version:1.0
 	width: 100%;
 	display: block;
 	display: inline-block;
-	display: ;
+
 }
 .shop .view-mode li a {
 	width: 80px;

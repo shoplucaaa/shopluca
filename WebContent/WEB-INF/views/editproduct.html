@@ -158,14 +158,15 @@
               <th>Xoa san pham</th>
             </tr>
             <tbody id="items">
+            <c:forEach items="${list}" var="s">
               <tr>
-                <td>01</td>
-                <td>Fuhlen</td>
-                <td>Chuot</td>
-                <td>100000</td>
-                <td>Con hang</td>
-                <td><img class="prodimg" src="https://png.pngitem.com/pimgs/s/44-448588_symbol-circle-black-computer-mouse-clipart-hd-png.png" alt="HTML tutorial" style="width:42px;height:42px;"></td>
-                <td>Hang Viet Nam chat luong Cao</td>
+                <td>${s.id}</td>
+                <td>${s.name</td>
+                <td>${s.type}</td>
+                <td>${s.price}</td>
+                <td>${s.status}</td>
+                <td><img class="prodimg" src="/public/images/${s.image}" alt="${s.image}" style="width:42px;height:42px;"></td>
+                <td>${s.description}</td>
                 <td>
                   <button type="submit">
                     Sua san pham
@@ -177,45 +178,7 @@
                   </button>
                 </td>
               </tr>
-              <tr>
-                <td>02</td>
-                <td>Logitec</td>
-                <td>Chuot</td>
-                <td>100000</td>
-                <td>Con hang</td>
-                <td><img class="prodimg" src="https://png.pngitem.com/pimgs/s/44-448588_symbol-circle-black-computer-mouse-clipart-hd-png.png" alt="HTML tutorial" style="width:42px;height:42px;"></td>
-                <td>Hang Viet Nam chat luong Cao</td>
-                <td>
-                  <button type="submit">
-                    Sua san pham
-                  </button>
-                </td>
-                <td>
-                  <button type="submit">
-                    Xoa san pham
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>Keyb</td>
-                <td>Ban phim</td>
-                <td>100000</td>
-                <td>Con hang</td>
-                <td><img class="prodimg" src="https://png.pngitem.com/pimgs/s/44-448588_symbol-circle-black-computer-mouse-clipart-hd-png.png" alt="HTML tutorial" style="width:42px;height:42px;"></td>
-                <td>Hang Viet Nam chat luong Cao</td>
-                <td>
-                  <button type="submit">
-                    Sua san pham
-                  </button>
-                </td>
-                <td>
-                  <button type="submit">
-                    Xoa san pham
-                  </button>
-                </td>
-              </tr>
-
+              </c:forEach>
 
             </tbody>
           </table>
