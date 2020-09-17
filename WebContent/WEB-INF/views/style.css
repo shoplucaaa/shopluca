@@ -605,6 +605,7 @@ Version:1.0
 	background:#fff;
 }
 .header.shop .nav-inner {
+	width: 100%;
 	margin: 0;
 	float: left;
 }
@@ -761,7 +762,7 @@ Version:1.0
 	color: #fff;
 	background: transparent;
 	position: relative;
-	background: #f7941d;
+/* 	background: #f7941d; */
 }
 .header.shop .all-category h3{
 	padding: 20px 25px;
@@ -1732,9 +1733,10 @@ Version:1.0
 	padding: 3px 14px;
 	border-radius: 3px;
 	font-size: 13px;
+	border: orange solid 2px;
 }
 .product-area .nav-tabs li:last-child a{
-	border-color:transparent;
+/* 	border-color:transparent; */
 } 
 .product-area .nav-tabs li a i{
 	margin-right:10px;
@@ -1980,6 +1982,7 @@ Version:1.0
 }
 .single-product .product-content{
 	margin-top:20px;
+	word-break: break-all;
 }
 .single-product .product-img:hover.default-overlay::before {
   background-color: rgba(38, 38, 38, 0.2);
@@ -2004,9 +2007,10 @@ Version:1.0
 }
 .single-product .product-content h3 {
     line-height: 22px;
+    float:right;
 }
 .single-product .product-content h3 a {
-	font-size: 14px;
+	font-size: 1.2em;
 	font-weight: 500;
 	margin: 0;
 }
@@ -2017,8 +2021,9 @@ Version:1.0
   margin: 6px 0 0 0;
 }
 .single-product .product-content .product-price span {
-	font-size: 15px;
+	font-size: 1.5em;
 	font-weight: 500;
+/* 	float: right; */
 }
 .single-product .product-content .product-price span.old {
   text-decoration: line-through;

@@ -56,7 +56,7 @@
 		<property name="url"
 			value="jdbc:sqlserver://localhost:1433;databaseName=productDB" />
 		<property name="username" value="sa" />
-		<property name="password" value="1234$" />
+		<property name="password" value="1234%" />
 	</bean>
 
 	<!-- Khai báo thuộc tính cài đặt cho thư viện Hibernate -->
