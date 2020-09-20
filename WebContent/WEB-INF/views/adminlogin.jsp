@@ -8,6 +8,7 @@
 <head>
 
 <style>
+<<<<<<< HEAD
       .login {
         position: relative;
         padding: 1em;
@@ -78,6 +79,70 @@
       .result {
         text-align: center;
       }
+=======
+table.login {
+	position: relative;
+	padding: 1em;
+	border: 1px solid green;
+	width: 80%;
+	overflow: scroll;
+	margin: auto;
+	border-radius: 12px;
+}
+
+.login input {
+	padding: 5px;
+	border: 2px solid blue;
+}
+
+.login input:focus {
+	background-color: FloralWhite;
+}
+
+.login table td {
+	text-align: center;
+}
+
+.btn-submit {
+	margin: auto;
+	font-size: 1.2em;
+	background-color: #4CAF50;
+	color: white;
+	padding: 15px 30px;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	opacity: 0.9;
+	border-radius: 6px;
+}
+
+.btn-submit:hover {
+	background-color: green;
+}
+
+.back {
+	margin: auto;
+	background-color: #6b6861;
+	color: white;
+	padding: 10px 30px;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	opacity: 0.9;
+	border-radius: 6px;
+}
+
+.back:hover {
+	background-color: grey;
+}
+
+.back a {
+	color: inherit;
+}
+
+.result {
+	text-align: center;
+>>>>>>> d2a3f210c0795bcdf1ba326a243610732d283040
 }
 </style>
 <!-- Meta Tag -->
@@ -187,14 +252,22 @@
 		<!--/ End Header Inner -->
 	</header>
 	<!--/ End Header -->
+<<<<<<< HEAD
 <div class="login">
 
 	<table>
+=======
+
+	<form:form action="login" modelAttribute="l">
+		<table class="login">
+
+>>>>>>> d2a3f210c0795bcdf1ba326a243610732d283040
 			<tr>
 				<td colspan="2">
 					<h2>Login</h2>
 				</td>
 			</tr>
+<<<<<<< HEAD
 
 			<tr>
 				<td>Username</td>
@@ -210,6 +283,26 @@
 				<td><input type="password" id="retypepass"
 					placeholder="Retype Password" /></td>
 			</tr>
+=======
+				<tr>
+				<td class="sendbutton" colspan="2">
+					${m.msg}
+				</td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td><form:input path="username" /></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><form:input type="password" path="username" /></td>
+			</tr>
+<!-- 			<tr> -->
+<!-- 				<td>Retype Password</td> -->
+<!-- 				<td><input type="password" id="retypepass" -->
+<!-- 					placeholder="Retype Password" /></td> -->
+<!-- 			</tr> -->
+>>>>>>> d2a3f210c0795bcdf1ba326a243610732d283040
 			<tr>
 				<td colspan="2" class="result">
 					<p id="result">Check login</p>
@@ -222,6 +315,7 @@
 				</td>
 			</tr>
 			<tr>
+<<<<<<< HEAD
 				<td colspan="2">
 					<a href="index" class="btn btn-primary" style="color:white; margin:15px; border-radius: 5px;">Tro ve</a>
 				</td>
@@ -229,6 +323,16 @@
 	</table>
 
 </div>
+=======
+				<td colspan="2"><a href="index" class="btn btn-primary"
+					style="color: white; margin: 15px; border-radius: 5px;">Tro ve</a>
+				</td>
+			</tr>
+			
+		</table>
+</form:form>
+
+>>>>>>> d2a3f210c0795bcdf1ba326a243610732d283040
 
 
 
