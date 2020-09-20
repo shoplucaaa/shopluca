@@ -53,7 +53,7 @@ tr:hover {
 	display: block;
 	position: relative;
 	margin: auto;
-	max-height: 50vh;
+	max-height: 80vh;
 	overflow-y: auto;
 }
 
@@ -140,38 +140,49 @@ table, th, td {
 
 <!-- StyleSheet -->
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="<c:url value="/views/css/bootstrap.css"></c:url>">
-	<!-- Magnific Popup -->
-    <link rel="stylesheet" href="<c:url value="/views/css/magnific-popup.min.css"></c:url>">
-	<!-- Font Awesome -->
-    <link rel="stylesheet" href="<c:url value="/views/css/font-awesome.css"></c:url>">
-	<!-- Fancybox -->
-	<link rel="stylesheet" href="<c:url value="/views/css/jquery.fancybox.min.css"></c:url>">
-	<!-- Themify Icons -->
-    <link rel="stylesheet" href="<c:url value="/views/css/themify-icons.css"></c:url>">
-	<!-- Nice Select CSS -->
-    <link rel="stylesheet" href="<c:url value="/views/css/niceselect.css"></c:url>">
-	<!-- Animate CSS -->
-    <link rel="stylesheet" href="<c:url value="/views/css/animate.css"></c:url>">
-	<!-- Flex Slider CSS -->
-    <link rel="stylesheet" href="<c:url value="/views/css/flex-slider.min.css"></c:url>">
-	<!-- Owl Carousel -->
-    <link rel="stylesheet" href="<c:url value="/views/css/owl-carousel.css"></c:url>">
-	<!-- Slicknav -->
-    <link rel="stylesheet" href="<c:url value="/views/css/slicknav.min.css"></c:url>">
-	
-	<!-- Eshop StyleSheet -->
-	<link rel="stylesheet" href="<c:url value="/views/css/reset.css"></c:url>">
-	<link rel="stylesheet" href="<c:url value="/views/style.css"></c:url>">
-    <link rel="stylesheet" href="<c:url value="/views/css/responsive.css"></c:url>">
+<!-- Bootstrap -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/bootstrap.css"></c:url>">
+<!-- Magnific Popup -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/magnific-popup.min.css"></c:url>">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/font-awesome.css"></c:url>">
+<!-- Fancybox -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/jquery.fancybox.min.css"></c:url>">
+<!-- Themify Icons -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/themify-icons.css"></c:url>">
+<!-- Nice Select CSS -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/niceselect.css"></c:url>">
+<!-- Animate CSS -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/animate.css"></c:url>">
+<!-- Flex Slider CSS -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/flex-slider.min.css"></c:url>">
+<!-- Owl Carousel -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/owl-carousel.css"></c:url>">
+<!-- Slicknav -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/slicknav.min.css"></c:url>">
+
+<!-- Eshop StyleSheet -->
+<link rel="stylesheet"
+	href="<c:url value="/views/css/reset.css"></c:url>">
+<link rel="stylesheet" href="<c:url value="/views/style.css"></c:url>">
+<link rel="stylesheet"
+	href="<c:url value="/views/css/responsive.css"></c:url>">
 
 
 
 </head>
 <body class="js">
 
-	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader-inner">
 			<div class="preloader-icon">
@@ -191,17 +202,22 @@ table, th, td {
 			<div class="container">
 				<div class="cat-nav-head">
 					<div class="row">
+						<div class="col-lg-3" style="background-color: black;">
+							<div class="all-category">
+								<h3 class="cat-heading">SHOPLUKA</h3>
+							</div>
+						</div>
 						<div class="col-lg-9 col-12" style="background-color: black;">
 							<div class="menu-area">
 								<!-- Main Menu -->
 								<nav class="navbar navbar-expand-lg">
 									<div class="navbar-collapse">
 										<div class="nav-inner">
-											<ul class="nav main-menu menu navbar-nav">
-												<li><a href="/">Home</a></li>
-												<li class="active"><a href="product.html">Product<span
-														class="new">New</span></a></li>
-												<li><a href="contact.html">Contact Us</a></li>
+											<ul class="nav main-menu menu navbar-nav"
+												style="float: right;">
+												<li class="active"><a href="#">Home</a></li>
+												<li><a href="product">Product<span class="new">New</span></a></li>
+												<li><a href="contact">Contact Us</a></li>
 											</ul>
 										</div>
 									</div>
@@ -209,6 +225,7 @@ table, th, td {
 								<!--/ End Main Menu -->
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -226,18 +243,18 @@ table, th, td {
 		</div>
 		<div class="form-search">
 			<input type="text" id="search" onkeyup="myFunction()"
-				placeholder="Tim san pham..">
+				placeholder="Tìm sản phẩm..">
 		</div>
 		<div class="listprod">
 			<table>
 				<tr>
 					<th>ID</th>
-					<th>Ten san pham</th>
-					<th>Loai san pham</th>
-					<th>Gia san pham</th>
-					<th>Con hang</th>
-					<th>Anh san pham</th>
-					<th>Mo ta san pham</th>
+					<th>Tên sản phẩm</th>
+					<th>Loại sản phẩm</th>
+					<th>Giá sản phẩm</th>
+					<th>Còn hàng</th>
+					<th>Ảnh sản phẩm</th>
+					<th>Mô tả sản phẩm</th>
 				</tr>
 				<tbody id="items">
 					<c:forEach items="${list}" var="s">
@@ -246,13 +263,14 @@ table, th, td {
 							<td>${s.name}</td>
 							<td>${s.type}</td>
 							<td>${s.price}</td>
-							<td>${s.status}</td>
-							<td><img class="prodimg" src="public/images/${s.image}" alt="HTML tutorial" style="width:42px;height:42px;"
+							<td>${s.status? "Còn hàng" : "Hết hàng"}</td>
+							<td><img class="prodimg" src="public/images/${s.image}"
+								alt="${s.image}" style="width: 42px; height: 42px;"
 								alt="${s.image}" style="width: 42px; height: 42px;"></td>
 							<td>${s.description}</td>
 						</tr>
 					</c:forEach>
-					
+
 
 
 				</tbody>
@@ -280,7 +298,8 @@ table, th, td {
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-								<a href="index.html"><img src="images/logo2.png" alt="#"></a>
+								<a href="index"><img
+									src="<c:url value="/views/images/logo2.png"></c:url>" alt="#"></a>
 							</div>
 							<p class="text">Praesent dapibus, neque id cursus ucibus,
 								tortor neque egestas augue, magna eros eu erat. Aliquam erat
@@ -297,13 +316,10 @@ table, th, td {
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Customer Service</h4>
+							<h4>Admin Services</h4>
 							<ul>
-								<li><a href="#">Payment Methods</a></li>
-								<li><a href="#">Money-back</a></li>
-								<li><a href="#">Returns</a></li>
-								<li><a href="#">Shipping</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="adminlogin">Admin login</a></li>
+
 							</ul>
 						</div>
 						<!-- End Single Widget -->
@@ -349,7 +365,8 @@ table, th, td {
 						</div>
 						<div class="col-lg-6 col-12">
 							<div class="right">
-								<img src="images/payments.png" alt="#">
+								<img src="<c:url value="/views/images/payment-method.png"/>"
+									alt="#">
 							</div>
 						</div>
 					</div>
@@ -361,8 +378,8 @@ table, th, td {
 
 
 	<!-- Jquery -->
-    <script src="<c:url value="/views/js/jquery.min.js"></c:url>"></script>
-    <script src="<c:url value="/views/js/jquery-migrate-3.0.0.js"></c:url>"></script>
+	<script src="<c:url value="/views/js/jquery.min.js"></c:url>"></script>
+	<script src="<c:url value="/views/js/jquery-migrate-3.0.0.js"></c:url>"></script>
 	<script src="<c:url value="/views/js/jquery-ui.min.js"></c:url>"></script>
 	<!-- Popper JS -->
 	<script src="<c:url value="/views/js/popper.min.js"></c:url>"></script>

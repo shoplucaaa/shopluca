@@ -248,10 +248,6 @@
 		<div class="edit-product">
 			<h2 class="heading-block">Chỉnh sửa danh sách sản phẩm</h2>
 			<h3 class="heading-block">${msg}</h3>
-			<div class="form-search">
-				<input type="text" id="search" onkeyup="myFunction()"
-					placeholder="Tìm sản phẩm..">
-			</div>
 			<div class="listprod">
 				<table>
 					<tr>
@@ -266,25 +262,23 @@
 						<th>Xóa sản phẩm</th>
 					</tr>
 					<tbody id="items">
-						<c:forEach items="${list}" var="s">
-							<tr>
-								<td>${s.id}</td>
-								<td>${s.name}</td>
-								<td>${s.type}</td>
-								<td>${s.price}</td>
-								<td ${s.status? "" : "style='color:red;'"}>${s.status? "Còn hàng" : "Hết hàng"}</td>
-								<td><img class="prodimg" src="public/images/${s.image}"
-									alt="${s.image}" style="width: 60px; height: 60px;"></td>
-								<td>${s.description}</td>
-								<td><a href="init-update-product?sID=${s.id}"><img
-										class="prodimg" src="public/icon/edit.png" alt="edit"
-										style="width: 60px; height: 60px;"></a></td>
-								<td><a href="delete-product?sID=${s.id}"
-									onclick="return confirm('Delete ${s.name}?')"> <img
-										class="prodimg" src="public/icon/delete.png" alt="delete"
-										style="width: 60px; height: 60px;"></a></td>
-							</tr>
-						</c:forEach>
+						<tr>
+							<td>${s.id}</td>
+							<td>${s.name}</td>
+							<td>${s.type}</td>
+							<td>${s.price}</td>
+							<td ${s.status? "" : "style='color:red;'"}>${s.status? "Còn hàng" : "Hết hàng"}</td>
+							<td><img class="prodimg" src="public/images/${s.image}"
+								alt="${s.image}" style="width: 60px; height: 60px;"></td>
+							<td>${s.description}</td>
+							<td><a href="init-update-product?sID=${s.id}"><img
+									class="prodimg" src="public/icon/edit.png" alt="edit"
+									style="width: 60px; height: 60px;"></a></td>
+							<td><a href="delete-product?sID=${s.id}"
+								onclick="return confirm('Delete ${s.name}?')"> <img
+									class="prodimg" src="public/icon/delete.png" alt="delete"
+									style="width: 60px; height: 60px;"></a></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -293,24 +287,24 @@
 
 
 		<div class="add-product">
-			<h2 class="heading-block">Thêm sản phẩm</h2>
+			<h2 class="heading-block">Sửa sản phẩm</h2>
 			<div class="addprod">
-				<form:form action="addnewproduct" modelAttribute="s"
+				<form:form action="update-product" modelAttribute="s"
 					enctype="multipart/form-data">
 
 					<table class="insert">
 						<tr>
-							<!-- 							<th>ID</th> -->
+							<th>ID</th>
 							<th>Tên sản phẩm</th>
 							<th>Loại sản phẩm</th>
 							<th>Giá sản phẩm</th>
 							<th>Còn hàng</th>
 							<th>Ảnh sản phẩm</th>
 							<th>Mô tả sản phẩm</th>
-							<th>Thêm sản phẩm</th>
+							<th>Sửa sản phẩm</th>
 						</tr>
 						<tr>
-							<%-- 							<td>${s.id}</td> --%>
+							<td><form:input path="id" /> <span class="error"></span></td>
 							<td><form:textarea path="name" /> <span class="error"><form:errors
 										path="name" /></span></td>
 							<td><form:select path="type">
@@ -333,7 +327,8 @@
 									value="false" />Hết hàng</td>
 
 
-							<td><img id="addedimage" src="#" alt="Thêm ảnh" /> <form:input
+							<td><img id="addedimage" src="public/images/${s.image}"
+								style="width: 60px; height: 60px;" alt="Sửa ảnh" /> <form:input
 									id="imageupload" onchange="readURL(this);" type="file"
 									path="image" /><span class="error"><form:errors
 										path="image" /></span></td>
@@ -345,7 +340,7 @@
 
 							<td>
 								<button type="submit">
-									<img class="prodimg" src="public/icon/insert.png" alt="insert"
+									<img class="prodimg" src="public/icon/edit2.png" alt="edit"
 										style="width: 60px; height: 60px;">
 								</button>
 							</td>
@@ -356,9 +351,9 @@
 			</div>
 		</div>
 
-<!-- 		<div class="return"> -->
-<!-- 			<a href="index">Quay lại</a> -->
-<!-- 		</div> -->
+		<div class="return">
+			<a href="editproduct">Quay lại</a>
+		</div>
 	</div>
 
 
@@ -494,30 +489,6 @@
 				reader.readAsDataURL(input.files[0]);
 			}
 		}
-
-		$(document)
-				.ready(
-						function() {
-							$("#search")
-									.on(
-											"keyup",
-											function() {
-												var value = $(this).val()
-														.toLowerCase();
-												$("#items tr")
-														.filter(
-																function() {
-																	$(this)
-																			.toggle(
-																					$(
-																							this)
-																							.text()
-																							.toLowerCase()
-																							.indexOf(
-																									value) > -1)
-																});
-											});
-						});
 	</script>
 
 
