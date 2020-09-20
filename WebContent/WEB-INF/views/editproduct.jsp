@@ -190,8 +190,8 @@ table, th, td {
 		<div class="add-product">
 			<h2 class="heading-block">Thêm sản phẩm</h2>
 			<div class="addprod">
-				<form:form action="register" modelAttribute="s"
-					enctype="multipart/form-data">
+<%-- 				<form:form action="register" modelAttribute="s" --%>
+<%-- 					enctype="multipart/form-data"> --%>
 					<table class="insert">
 						<tr>
 							<!--                 <th>ID</th> -->
@@ -234,7 +234,7 @@ table, th, td {
 							</td>
 						</tr>
 					</table>
-				</form:form>
+<%-- 				</form:form> --%>
 			</div>
 		</div>
 		<div class="return">
