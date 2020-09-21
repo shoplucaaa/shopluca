@@ -1,0 +1,25 @@
+
+//	@RequestMapping("/login")
+//	public String login(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr, Model l) {	
+//				
+//		request.getSession().setAttribute("system_name", "system name");
+//
+//		
+//		
+//		String username = request.getParameter("username");
+//		String password = request.getParameter("password");
+//		
+//
+//		Pattern pattern = Pattern.compile("^nam");
+//		Matcher matcher = pattern.matcher(password);
+//		boolean matchFound = matcher.find();
+//
+//					
+//			if (matchFound) {
+//				return "editproduct"; 
+//			} else {
+//				m.addAttribute("msg", "Username or password incorrect");
+//				return "adminlogin";
+//			}	
+//	
+//}
