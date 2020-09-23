@@ -47,17 +47,17 @@ public class ProductController {
 		return "product";
 	}
 
-//	@RequestMapping("/editproduct")
-//	public String editproduct(@ModelAttribute("s") Product s, Model m, HttpServletRequest request,
-//			HttpServletResponse response, CookieLocaleResolver clr) {
-//
-//		m.addAttribute("s", s);
-//
-//		List<Product> list = productDAO.selectAll();
-//		m.addAttribute("list", list);
-//
-//		return "editproduct";
-//	}
+	@RequestMapping("/editproduct")
+	public String editproduct(@ModelAttribute("s") Product s, Model m, HttpServletRequest request,
+			HttpServletResponse response, CookieLocaleResolver clr) {
+
+		m.addAttribute("s", s);
+
+		List<Product> list = productDAO.selectAll();
+		m.addAttribute("list", list);
+
+		return "editproduct";
+	}
 
 	@RequestMapping("/addnewproduct")
 	public String addnewproduct(@ModelAttribute("s") Product s, Model m, HttpServletRequest request) {
@@ -138,13 +138,18 @@ public class ProductController {
 		Product s = productDAO.selectById(sID);
 
 		m.addAttribute("s", s);
+		
+		String oldfilename = s.getImage();
+		
+		System.out.println(oldfilename);
+		
+		m.addAttribute("o", oldfilename);
 		return "updateproduct";
 	}
 
 	@RequestMapping("update-product")
 	public String update(@Valid @ModelAttribute Product s, BindingResult result, Model m, HttpServletRequest request) {
-		String oldfilename = s.getImage();
-		System.out.println(oldfilename);
+
 		ServletFileUpload sfu = new ServletFileUpload(new DiskFileItemFactory());
 		try {
 			List<FileItem> lstItem = sfu.parseRequest(request);
@@ -170,12 +175,15 @@ public class ProductController {
 						case "status":
 							s.setStatus(Boolean.parseBoolean(data));
 							break;
+							
 //						case "likecount":
 //							s.setLikecount(Integer.parseInt(data));;
 //							break;
 						}
 					}
 				} else {
+					String oldfilename = s.getImage();
+					System.out.println(oldfilename);
 					String filename = item.getName();
 					System.out.println(filename);
 					

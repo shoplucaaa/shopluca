@@ -52,6 +52,14 @@ public class MainController {
 	return "editproduct";
 }
 	
+	@RequestMapping("/contact")
+	public String contact(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
+		
+		
+//		request.getSession().setAttribute("system_name", "system name");
+//		clr.setLocale(request, response, new Locale("vi"));
+	return "contact";
+	}
 	
 	@RequestMapping("/index")
 	public String index(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
