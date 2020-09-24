@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 
 import java.util.Date;
@@ -29,34 +30,42 @@ public class EmailController {
     
 //   appp password iaevexxgzjmiftqj
     
-    private static final String EMAIL_FROM = "From@gmail.com";
-    private static final String EMAIL_TO = "asdf@yahoo.com, vutunam994@gmail.com";
-    private static final String EMAIL_TO_CC = "";
-
-    private static final String EMAIL_SUBJECT = "Test Send Email via SMTP";
-    private static final String EMAIL_TEXT = "Hello Java Mail \n ABC123";
+//    private static final String EMAIL_FROM = "From@gmail.com";
+//    private static final String EMAIL_TO = "asdf@yahoo.com, vutunam994@gmail.com";
+//    private static final String EMAIL_TO_CC = "";
+//
+//    private static final String EMAIL_SUBJECT = "Test Send Email via SMTP";
+//    private static final String EMAIL_TEXT = "Hello Java Mail \n ABC123";
 
     
     @RequestMapping("/sendemail")
-    public String sendemail(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr)  {
+    public String sendemail(@RequestParam(name = "message") String message, @RequestParam(name = "contact") String contact, @RequestParam(name = "email") String email, @RequestParam(name = "subject") String subject, @RequestParam(name = "name") String name, Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr)  {
    	
+    	String EMAIL_FROM = email;
+        String EMAIL_TO = "vutunam994@gmail.com";
+        String EMAIL_TO_CC = "";
+
+        String EMAIL_SUBJECT = subject;
+        String CONTACT = contact;
+        String EMAIL_TEXT = message;
+    	
+        
+        
         Properties prop = System.getProperties();
         prop.put("mail.smtp.host", SMTP_SERVER); //optional, defined in SMTPTransport
         prop.put("mail.smtp.auth", "true");
         prop.put("mail.smtp.port", "587"); // default port 25
         prop.put("mail.smtp.starttls.enable", "true");
-        
-        
+
         Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
 
             protected PasswordAuthentication getPasswordAuthentication() {
-
-                return new PasswordAuthentication("vutunam994@gmail.com", "VuxTuxNam");
-
+                return new PasswordAuthentication(USERNAME, PASSWORD);
             }
-
         });
         
+        
+
 
         Message msg = new MimeMessage(session);
 
@@ -77,19 +86,19 @@ public class EmailController {
             msg.setSubject(EMAIL_SUBJECT);
 
 			// content
-            msg.setText(EMAIL_TEXT);
+            msg.setText(EMAIL_TEXT + "\r\n" + "from " + CONTACT + " / " + EMAIL_FROM );
 
             msg.setSentDate(new Date());
             
-            System.out.println("getting smtp...");
+            
 			// Get SMTPTransport
             SMTPTransport t =  (SMTPTransport) session.getTransport("smtp");
             
-            System.out.println("connect...");
+            
 			// connect
             t.connect(SMTP_SERVER, USERNAME, PASSWORD);
             
-            System.out.println("sending...");
+            
 			// send
             t.sendMessage(msg, msg.getAllRecipients());
 
@@ -101,6 +110,8 @@ public class EmailController {
             e.printStackTrace();
         }
     	
+        m.addAttribute("msg", "Email successfully sended");
+        
         return "contact";
     }
 }

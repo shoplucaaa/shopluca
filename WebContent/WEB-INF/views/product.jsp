@@ -6,6 +6,122 @@
 <html lang="zxx">
 <head>
 
+<style>
+* {
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.main_warp {
+	padding-bottom: 10px;
+}
+
+table th {
+	background-color: #768776;
+}
+
+tr:hover {
+	background-color: #f1f1f1;
+}
+
+.form-search {
+	max-width: 1000px;
+	padding: 0px 20px;
+	margin: 0px auto 40px;
+}
+
+#search {
+	background-image:
+		url('https://e7.pngegg.com/pngimages/605/56/png-clipart-search-icon-computer-icons-android-desktop-search-button-internet-share-icon-thumbnail.png');
+	background-position: 8px 8px;
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+}
+
+.listprod {
+	box-sizing: border-box;
+	max-width: 1000px;
+	padding: 0px 20px;
+	display: block;
+	position: relative;
+	margin: auto;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.listprod table {
+	margin: 50px auto;
+}
+
+input {
+	border: 1px solid white;
+	text-align: center;
+	width: 100%;
+	word-break: break-word;
+}
+
+table, th, td {
+	border: 2px solid black;
+	border-collapse: collapse;
+	padding: 3px 10px;
+	text-align: center;
+}
+
+.prodimg {
+	margin: auto;
+}
+
+.return {
+	position: relative;
+	text-align: center;
+	display: block;
+	margin: 50px auto;
+}
+
+.return a {
+	display: flex;
+	width: 180px;
+	margin: auto;
+	border-radius: 0px;
+	padding: 0px;
+	justify-content: center;
+	background-color: #4CAF50;
+	border: 2px solid #4CAF50;
+	align-items: center;
+	font-size: 18px;
+	color: #fff;
+	font-weight: 600;
+	height: 50px;
+	text-decoration: none;
+	transition: .4s;
+}
+
+.return a:hover {
+	background: #fff;
+	color: #4CAF50;
+}
+
+.main_warp .heading-block {
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 28px;
+	line-height: 36px;
+	color: #333;
+	font-weight: 600;
+}
+
+.edit-product {
+	padding-top: 80px;
+}
+</style>
 <!-- Meta Tag -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +130,9 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Title Tag  -->
-<title>${system_name}</title>
+<title>Eshop - eCommerce HTML5 Template.</title>
 <!-- Favicon -->
-<link rel="icon" type="image/png"
-	href="<c:url value="/views/images/favicon.png"></c:url>">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <!-- Web Font -->
 <link
 	href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
@@ -62,11 +177,12 @@
 <link rel="stylesheet" href="<c:url value="/views/style.css"></c:url>">
 <link rel="stylesheet"
 	href="<c:url value="/views/css/responsive.css"></c:url>">
-	
-	</head>
+
+
+
+</head>
 <body class="js">
-	<fmt:setLocale value="vi_VN" />
-	<!-- Preloader -->
+
 	<div class="preloader">
 		<div class="preloader-inner">
 			<div class="preloader-icon">
@@ -97,7 +213,8 @@
 								<nav class="navbar navbar-expand-lg">
 									<div class="navbar-collapse">
 										<div class="nav-inner">
-											<ul class="nav main-menu menu navbar-nav" style="float:right;">
+											<ul class="nav main-menu menu navbar-nav"
+												style="float: right;">
 												<li class="active"><a href="#">Home</a></li>
 												<li><a href="product">Product<span class="new">New</span></a></li>
 												<li><a href="contact">Contact Us</a></li>
@@ -116,140 +233,61 @@
 		<!--/ End Header Inner -->
 	</header>
 	<!--/ End Header -->
-	
-	<!-- Breadcrumbs -->
-	<div class="breadcrumbs">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="bread-inner">
-						<ul class="bread-list">
-							<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-							<li class="active"><a href="blog-single.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+
+
+
+	<div class="edit-product">
+		<div class="heading-block"
+			style="text-align: center; margin-bottom: 30px;">
+			<h2>Danh sách sản phẩm</h2>
+		</div>
+		<div class="form-search">
+			<input type="text" id="search" onkeyup="myFunction()"
+				placeholder="Tìm sản phẩm..">
+		</div>
+		<div class="listprod">
+			<table>
+				<tr>
+					<th>ID</th>
+					<th>Tên sản phẩm</th>
+					<th>Loại sản phẩm</th>
+					<th>Giá sản phẩm</th>
+					<th>Còn hàng</th>
+					<th>Ảnh sản phẩm</th>
+					<th>Mô tả sản phẩm</th>
+				</tr>
+				<tbody id="items">
+					<c:forEach items="${list}" var="s">
+						<tr>
+							<td>${s.id}</td>
+							<td>${s.name}</td>
+							<td>${s.type}</td>
+							<td>${s.price}</td>
+							<td>${s.status? "Còn hàng" : "Hết hàng"}</td>
+							<td><img class="prodimg" src="public/images/${s.image}"
+								alt="${s.image}" style="width: 42px; height: 42px;"
+								alt="${s.image}" style="width: 42px; height: 42px;"></td>
+							<td>${s.description}</td>
+						</tr>
+					</c:forEach>
+
+
+
+				</tbody>
+			</table>
 		</div>
 	</div>
-	<!-- End Breadcrumbs -->
-  
-	<!-- Start Contact -->
-	<section id="contact-us" class="contact-us section">
-		<div class="container">
-				<div class="contact-head">
-					<div class="row">
-						<div class="col-lg-8 col-12">
-							<div class="form-main">
-								<div class="title">
-									<h4>Get in touch</h4>
-									<h3>Write us a message</h3>
-									<h3 style="color:green;">${msg}</h3>
-								</div>
-								<form class="form" method="post" action="sendemail">
-									<div class="row">
-										<div class="col-lg-6 col-12">
-											<div class="form-group">
-												<label>Your Name<span>*</span></label>
-												<input name="name" type="text" placeholder="">
-											</div>
-										</div>
-										<div class="col-lg-6 col-12">
-											<div class="form-group">
-												<label>Your Subjects<span>*</span></label>
-												<input name="subject" type="text" placeholder="">
-											</div>
-										</div>
-										<div class="col-lg-6 col-12">
-											<div class="form-group">
-												<label>Your Email<span>*</span></label>
-												<input name="email" type="email" placeholder="">
-											</div>	
-										</div>
-										<div class="col-lg-6 col-12">
-											<div class="form-group">
-												<label>Your Phone<span>*</span></label>
-												<input name="contact" type="text" placeholder="">
-											</div>	
-										</div>
-										<div class="col-12">
-											<div class="form-group message">
-												<label>your message<span>*</span></label>
-												<textarea name="message" placeholder=""></textarea>
-											</div>
-										</div>
-										<div class="col-12">
-											<div class="form-group button">
-												<button type="submit" class="btn">Send Message</button>
-												<button type="reset" class="btn" style="background-color:red">Reset Message</button>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="col-lg-4 col-12">
-							<div class="single-head">
-								<div class="single-info">
-									<i class="fa fa-phone"></i>
-									<h4 class="title">Call us Now:</h4>
-									<ul>
-										<li>+123 456-789-1120</li>
-										<li>+522 672-452-1120</li>
-									</ul>
-								</div>
-								<div class="single-info">
-									<i class="fa fa-envelope-open"></i>
-									<h4 class="title">Email:</h4>
-									<ul>
-										<li><a href="mailto:info@yourwebsite.com">info@yourwebsite.com</a></li>
-										<li><a href="mailto:info@yourwebsite.com">support@yourwebsite.com</a></li>
-									</ul>
-								</div>
-								<div class="single-info">
-									<i class="fa fa-location-arrow"></i>
-									<h4 class="title">Our Address:</h4>
-									<ul>
-										<li>KA-62/1, Travel Agency, 45 Grand Central Terminal, New York.</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	</section>
-	<!--/ End Contact -->
-	
-	<!-- Map Section -->
-	<div class="map-section">
-		<div id="myMap"></div>
+
+
+
+	<div class="return">
+		<a href="/">Quay lại</a>
 	</div>
-	<!--/ End Map Section -->
-	
-	<!-- Start Shop Newsletter  -->
-	<section class="shop-newsletter section">
-		<div class="container">
-			<div class="inner-top">
-				<div class="row">
-					<div class="col-lg-8 offset-lg-2 col-12">
-						<!-- Start Newsletter Inner -->
-						<div class="inner">
-							<h4>Newsletter</h4>
-							<p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
-							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-								<input name="EMAIL" placeholder="Your email address" required="" type="email">
-								<button class="btn">Subscribe</button>
-							</form>
-						</div>
-						<!-- End Newsletter Inner -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Shop Newsletter -->
-	
+
+
+
+
+
 	<!-- Start Footer Area -->
 	<footer class="footer">
 		<!-- Footer Top -->
@@ -260,8 +298,8 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-								<a href="index"><img src="<c:url value="/views/images/logo2.png"></c:url>"
-									alt="#"></a>
+								<a href="index"><img
+									src="<c:url value="/views/images/logo2.png"></c:url>" alt="#"></a>
 							</div>
 							<p class="text">Praesent dapibus, neque id cursus ucibus,
 								tortor neque egestas augue, magna eros eu erat. Aliquam erat
@@ -327,7 +365,8 @@
 						</div>
 						<div class="col-lg-6 col-12">
 							<div class="right">
-								<img src="<c:url value="/views/images/payment-method.png"/>" alt="#">
+								<img src="<c:url value="/views/images/payment-method.png"/>"
+									alt="#">
 							</div>
 						</div>
 					</div>
@@ -336,6 +375,7 @@
 		</div>
 	</footer>
 	<!-- /End Footer Area -->
+
 
 	<!-- Jquery -->
 	<script src="<c:url value="/views/js/jquery.min.js"></c:url>"></script>
@@ -346,7 +386,7 @@
 	<!-- Bootstrap JS -->
 	<script src="<c:url value="/views/js/bootstrap.min.js"></c:url>"></script>
 	<!-- Color JS -->
-<%-- 	<script src="<c:url value="/views/js/colors.js"></c:url>"></script> --%>
+	<script src="<c:url value="/views/js/colors.js"></c:url>"></script>
 	<!-- Slicknav JS -->
 	<script src="<c:url value="/views/js/slicknav.min.js"></c:url>"></script>
 	<!-- Owl Carousel JS -->
@@ -369,6 +409,42 @@
 	<script src="<c:url value="/views/js/easing.js"></c:url>"></script>
 	<!-- Active JS -->
 	<script src="<c:url value="/views/js/active.js"></c:url>"></script>
-	
+	<script>
+		function readURL(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+				reader.onload = function(e) {
+					$('#addedimage').attr('src', e.target.result).width(70)
+							.height(auto);
+				};
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+
+		$(document)
+				.ready(
+						function() {
+							$("#search")
+									.on(
+											"keyup",
+											function() {
+												var value = $(this).val()
+														.toLowerCase();
+												$("#items tr")
+														.filter(
+																function() {
+																	$(this)
+																			.toggle(
+																					$(
+																							this)
+																							.text()
+																							.toLowerCase()
+																							.indexOf(
+																									value) > -1)
+																});
+											});
+						});
+	</script>
+
 </body>
 </html>
