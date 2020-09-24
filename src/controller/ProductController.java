@@ -3,6 +3,7 @@ package controller;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,8 +20,11 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
 import entity.Product;
 import model.ProductDAO;
@@ -47,22 +51,21 @@ public class ProductController {
 		return "product";
 	}
 
-//	@RequestMapping("/editproduct")
-//	public String editproduct(@ModelAttribute("s") Product s, Model m, HttpServletRequest request,
-//			HttpServletResponse response, CookieLocaleResolver clr) {
-//
-//		m.addAttribute("s", s);
-//
-//		List<Product> list = productDAO.selectAll();
-//		m.addAttribute("list", list);
-//
-//		return "editproduct";
-//	}
+	@RequestMapping("/editproduct")
+	public String editproduct(@ModelAttribute("s") Product s, Model m, HttpServletRequest request,
+			HttpServletResponse response, CookieLocaleResolver clr) {
+
+		m.addAttribute("s", s);
+
+		List<Product> list = productDAO.selectAll();
+		m.addAttribute("list", list);
+
+		return "editproduct";
+	}
 
 	@RequestMapping("/addnewproduct")
-	public String addnewproduct(@ModelAttribute("s") Product s, Model m, HttpServletRequest request) {
-		// 1. Common file-upload
-		// 2. Common io
+	public RedirectView addnewproduct(@ModelAttribute("s") Product s, Model m, HttpServletRequest request, RedirectAttributes redi) {
+
 		ServletFileUpload sfu = new ServletFileUpload(new DiskFileItemFactory());
 		try {
 			List<FileItem> lstItem = sfu.parseRequest(request);
@@ -99,7 +102,7 @@ public class ProductController {
 						File destination = new File(serverPath, java.time.LocalDate.now() + " " + filename);
 						if (destination.exists()) {
 							destination.delete();
-							m.addAttribute("msg", "File already exists");
+							redi.addFlashAttribute("msg", "File already existed");
 						}
 						item.write(destination);
 						s.setImage(java.time.LocalDate.now() + " " + filename);
@@ -119,16 +122,15 @@ public class ProductController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		m.addAttribute("s", s);
+		
 
 		boolean isSuccess = productDAO.insert(s);
 
 		if (isSuccess) {
-			return "redirect:editproduct";
+			return new RedirectView("editproduct");
 		} else {
 			m.addAttribute("msg", "Error inserting");
-			return "redirect:editproduct";
+			return new RedirectView("editproduct");
 		}
 
 	}
@@ -138,13 +140,20 @@ public class ProductController {
 		Product s = productDAO.selectById(sID);
 
 		m.addAttribute("s", s);
+		
+		String oldfilename = s.getImage();
+		
+		System.out.println(oldfilename);
+		
+		m.addAttribute("o", oldfilename);
 		return "updateproduct";
 	}
 
 	@RequestMapping("update-product")
 	public String update(@Valid @ModelAttribute Product s, BindingResult result, Model m, HttpServletRequest request) {
-		String oldfilename = s.getImage();
-		System.out.println(oldfilename);
+		List<Product> list = productDAO.selectAll();
+		int aidi = 0;
+		String oldfilename = null;
 		ServletFileUpload sfu = new ServletFileUpload(new DiskFileItemFactory());
 		try {
 			List<FileItem> lstItem = sfu.parseRequest(request);
@@ -154,6 +163,7 @@ public class ProductController {
 					if (!data.isEmpty()) {
 						switch (item.getFieldName()) {
 						case "id":
+							aidi = (Integer.parseInt(data));
 							s.setId(Integer.parseInt(data));
 						case "name":
 							s.setName(data);
@@ -170,21 +180,36 @@ public class ProductController {
 						case "status":
 							s.setStatus(Boolean.parseBoolean(data));
 							break;
+							
 //						case "likecount":
 //							s.setLikecount(Integer.parseInt(data));;
 //							break;
 						}
+						
+						Iterator<Product> iter = list.iterator();
+						while(iter.hasNext()) {
+							Product oid = iter.next();
+						    if (oid.getId() == aidi) {
+						    	oldfilename = oid.getImage();
+						    	System.out.println(oldfilename);
+						    }
+						}
+					
 					}
 				} else {
+					
 					String filename = item.getName();
 					System.out.println(filename);
 					
 					if (!filename.isEmpty()) {
+						
 						String serverPath = request.getServletContext().getRealPath("public/images");
 						File destination = new File(serverPath, java.time.LocalDate.now() + " " + filename);
+						File oldfile = new File(serverPath, oldfilename);
+						oldfile.delete();
 						if (destination.exists()) {
 							destination.delete();
-							m.addAttribute("msg", "File already exists");
+							m.addAttribute("msg", "File already existed");
 						}
 						item.write(destination);
 						s.setImage(java.time.LocalDate.now() + " " + filename);

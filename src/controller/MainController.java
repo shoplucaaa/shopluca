@@ -12,6 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
 import entity.Product;
 
@@ -33,33 +35,33 @@ public class MainController {
 	@RequestMapping("/adminlogin")
 	public String adminlogin(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
 		
-		
-//		request.getSession().setAttribute("system_name", "system name");
-//		clr.setLocale(request, response, new Locale("vi"));
 	return "adminlogin";
 }
+	
+	
 	@RequestMapping("/login")
-	public String login(@ModelAttribute("s") Product s, Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
+	public RedirectView login(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr, RedirectAttributes redi) {	
 		
-		m.addAttribute("s", s);
-		
-		
-		
-		List<Product> list = productDAO.selectAll();
-		m.addAttribute("list", list);
-//		request.getSession().setAttribute("system_name", "system name");
-//		clr.setLocale(request, response, new Locale("vi"));
-	return "editproduct";
+		redi.addFlashAttribute("msg", "Login succesfully");
+		redi.addFlashAttribute("system_name", "Edit Product");
+		request.getSession().invalidate();
+	return new RedirectView("editproduct");
 }
 	
+	
+	
+	
+	@RequestMapping("/contact")
+	public String contact(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
+
+	return "contact";
+	}
 	
 	@RequestMapping("/index")
 	public String index(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
 		
-		request.getSession().setAttribute("system_name", "system name");
+		request.getSession().setAttribute("system_name", "Welcome to ShopLuKa");
 		
-		
-//		clr.setLocale(request, response, new Locale("vi"));
 
 		List<Product> list = productDAO.selectAll();
 		m.addAttribute("list", list);
