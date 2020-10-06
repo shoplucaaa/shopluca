@@ -855,5 +855,8 @@
 	<script src="<c:url value="/views/js/easing.js"></c:url>"></script>
 	<!-- Active JS -->
 	<script src="<c:url value="/views/js/active.js"></c:url>"></script>
+	
+	<script type="text/javascript">function add_chatinline(){var hccid=94095094;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+add_chatinline(); </script>
 </body>
 </html>
