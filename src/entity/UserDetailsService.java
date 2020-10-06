@@ -26,7 +26,7 @@ public class UserDetailsService implements org.springframework.security.core.use
 		String fileName = "users.csv";
 
 		ClassLoader classLoader = getClass().getClassLoader();
-		InputStream inputStream = classLoader.getResourceAsStream("/" + fileName);
+		InputStream inputStream = classLoader.getResourceAsStream("classpath:" + fileName);
 		InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
 		BufferedReader br = new BufferedReader(streamReader);
 
