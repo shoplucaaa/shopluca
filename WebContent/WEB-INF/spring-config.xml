@@ -50,11 +50,11 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:config.properties</value>
+				<value>classpath:src/"config.properties</value>
 			</list>
 		</property>
-		<property name="ignoreResourceNotFound" value="false" />
-		<property name="ignoreUnresolvablePlaceholders" value="false" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
 		<property name="systemPropertiesModeName"
 			value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
 	</bean>
