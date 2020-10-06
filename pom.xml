@@ -9,29 +9,29 @@
 	<url>http://maven.apache.org</url>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
-<!-- 		<plugins> -->
-<!-- 			<plugin> -->
-<!-- 				<artifactId>maven-compiler-plugin</artifactId> -->
-<!-- 				<version>3.8.1</version> -->
-<!-- 				<configuration> -->
-<!-- 					<release>14</release> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
-<!-- 			<plugin> -->
-<!-- 				<artifactId>maven-war-plugin</artifactId> -->
-<!-- 				<version>3.2.3</version> -->
-<!-- 				<configuration> -->
-<!-- 					<warSourceDirectory>WebContent</warSourceDirectory> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
-<!-- 			<plugin> -->
-<!-- 				<groupId>com.heroku.sdk</groupId> -->
-<!-- 				<artifactId>heroku-maven-plugin</artifactId> -->
-<!-- 				<version>3.0.3</version> -->
-<!-- 			</plugin> -->
-<!-- 		</plugins> -->
-		
-<plugins>
+		<!-- <plugins> -->
+		<!-- <plugin> -->
+		<!-- <artifactId>maven-compiler-plugin</artifactId> -->
+		<!-- <version>3.8.1</version> -->
+		<!-- <configuration> -->
+		<!-- <release>14</release> -->
+		<!-- </configuration> -->
+		<!-- </plugin> -->
+		<!-- <plugin> -->
+		<!-- <artifactId>maven-war-plugin</artifactId> -->
+		<!-- <version>3.2.3</version> -->
+		<!-- <configuration> -->
+		<!-- <warSourceDirectory>WebContent</warSourceDirectory> -->
+		<!-- </configuration> -->
+		<!-- </plugin> -->
+		<!-- <plugin> -->
+		<!-- <groupId>com.heroku.sdk</groupId> -->
+		<!-- <artifactId>heroku-maven-plugin</artifactId> -->
+		<!-- <version>3.0.3</version> -->
+		<!-- </plugin> -->
+		<!-- </plugins> -->
+
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -55,7 +55,14 @@
 					</execution>
 				</executions>
 			</plugin>
-</plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
 
 	</build>
 
@@ -79,13 +86,13 @@
 			<artifactId>spring-orm</artifactId>
 			<version>5.2.7.RELEASE</version>
 		</dependency>
-		
-			<dependency>
-		<groupId>junit</groupId>
-		<artifactId>junit</artifactId>
-		<version>3.8.1</version>
-		<scope>test</scope>
-	</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 
