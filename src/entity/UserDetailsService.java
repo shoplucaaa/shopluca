@@ -71,7 +71,7 @@ public class UserDetailsService implements org.springframework.security.core.use
 
 					br.close();
 //					return new User(userRow[0], pas, AuthorityUtils.createAuthorityList(userRow[2]));
-					return new User("admin", pas1, "ADMIN");
+					return new User("admin", pas1, AuthorityUtils.createAuthorityList("ADMIN"));
 				}
 			}
 
