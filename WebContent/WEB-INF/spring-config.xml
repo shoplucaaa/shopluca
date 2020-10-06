@@ -66,57 +66,57 @@
 
 	<!-- Khai báo cấu hình Hibernate trong spring-config -->
 	<!-- Khai báo thông số Datasource -->
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName"
-			value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-		<property name="url" value="${db.url}" />
-		<property name="username" value="${db.user}" />
-		<property name="password" value="${db.password}" />
-	</bean>
+<!-- 	<bean id="dataSource" -->
+<!-- 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+<!-- 		<property name="driverClassName" -->
+<!-- 			value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> -->
+<!-- 		<property name="url" value="${db.url}" /> -->
+<!-- 		<property name="username" value="${db.user}" /> -->
+<!-- 		<property name="password" value="${db.password}" /> -->
+<!-- 	</bean> -->
 
 
 
+<!-- 	<bean id="sessionFactory" -->
+<!-- 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"> -->
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+<!-- 		<property name="packagesToScan" value="entity" /> -->
+<!-- 		<property name="hibernateProperties"> -->
+<!-- 			<props> -->
+<!-- 				<prop key="hibernate.connection.pool_size">1</prop> -->
+<!-- 				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</prop> -->
+<!-- 				<prop key="hibernate.current_session_context_class">thread</prop> -->
+<!-- 				<prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop> -->
+<!-- 				<prop key="hibernate.show_sql">true</prop> -->
+<!-- 			</props> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+<!-- 	Khai báo thuộc tính cài đặt cho thư viện Hibernate -->
 	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="entity" />
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.connection.pool_size">1</prop>
-				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</prop>
-				<prop key="hibernate.current_session_context_class">thread</prop>
-				<!-- <prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop> -->
-				<prop key="hibernate.show_sql">true</prop>
-			</props>
-		</property>
+	class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+	<property name="dataSource" ref="dataSource" />
+	<property name="packagesToScan" value="entity" />
+	<property name="hibernateProperties">
+	<props>
+	<prop key="hibernate.connection.pool_size">1</prop>
+	<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+	<prop key="hibernate.current_session_context_class">thread</prop>
+	<prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop>
+	<prop key="hibernate.show_sql">true</prop>
+	</props>
+	</property>
 	</bean>
 
-	<!-- Khai báo thuộc tính cài đặt cho thư viện Hibernate -->
-	<!-- <bean id="sessionFactory" -->
-	<!-- class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"> -->
-	<!-- <property name="dataSource" ref="dataSource" /> -->
-	<!-- <property name="packagesToScan" value="entity" /> -->
-	<!-- <property name="hibernateProperties"> -->
-	<!-- <props> -->
-	<!-- <prop key="hibernate.connection.pool_size">1</prop> -->
-	<!-- <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> -->
-	<!-- <prop key="hibernate.current_session_context_class">thread</prop> -->
-	<!-- <prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop> -->
-	<!-- <prop key="hibernate.show_sql">true</prop> -->
-	<!-- </props> -->
-	<!-- </property> -->
-	<!-- </bean> -->
 
 
-
-	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
-	<!-- <property name="driverClassName" -->
-	<!-- value="org.postgresql.Driver"/> -->
-	<!-- <property name="url" value="jdbc:postgresql://ec2-107-20-104-234.compute-1.amazonaws.com:5432/d3oikn5k0298sq?sslmode=require"/> -->
-	<!-- <property name="username" value="xrrkyrcbtwrbpy"/> -->
-	<!-- <property name="password" value="49df2f382e8daa178bdc9ca88e1a11e6a08254613951efd0a288894fda70788c"/> -->
-	<!-- </bean> -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName"
+	value="org.postgresql.Driver"/>
+	<property name="url" value="jdbc:postgresql://ec2-107-20-104-234.compute-1.amazonaws.com:5432/d3oikn5k0298sq?sslmode=require"/>
+	<property name="username" value="xrrkyrcbtwrbpy"/>
+	<property name="password" value="49df2f382e8daa178bdc9ca88e1a11e6a08254613951efd0a288894fda70788c"/>
+	</bean>
 
 
 
