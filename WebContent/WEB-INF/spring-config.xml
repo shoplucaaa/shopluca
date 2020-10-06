@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context.xsd
+              http://www.springframework.org/schema/util 
+   		   http://www.springframework.org/schema/util/spring-util.xsd
+   http://www.springframework.org/schema/mvc 
+   http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- Cài đặt resource I18N -->
+	<bean id="validateSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:validate" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	<!-- Cài đặt resource message cho validator -->
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="validateSource" />
+	</bean>
+
+	<mvc:annotation-driven validator="validator" />
+
+	<!-- Cấu hình Locale mặc định -->
+	<!-- <bean id="FixedLocaleResolver" -->
+	<!-- class="org.springframework.web.servlet.i18n.FixedLocaleResolver"> -->
+	<!-- <property name="defaultLocale" value="en" /> -->
+	<!-- </bean> -->
+
+	<!-- Locale Change Interceptor to achieve internationalization. -->
+	<!-- <mvc:interceptors> -->
+	<!-- <mvc:interceptor> -->
+	<!-- <mvc:mapping path="/change-lang" /> -->
+	<!-- <bean -->
+	<!-- class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"> -->
+	<!-- <property name="paramName" value="lang"></property> -->
+	<!-- </bean> -->
+	<!-- </mvc:interceptor> -->
+	<!-- </mvc:interceptors> -->
+
+
+	<bean id="appProperties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:config.properties</value>
+			</list>
+		</property>
+		<property name="ignoreResourceNotFound" value="false" />
+		<property name="ignoreUnresolvablePlaceholders" value="false" />
+		<property name="systemPropertiesModeName"
+			value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+	</bean>
+
+	<!-- Cookie Resolver -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+	</bean>
+
+	<!-- Khai báo cấu hình Hibernate trong spring-config -->
+	<!-- Khai báo thông số Datasource -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.user}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="entity" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.connection.pool_size">1</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<!-- <prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop> -->
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- Khai báo thuộc tính cài đặt cho thư viện Hibernate -->
+	<!-- <bean id="sessionFactory" -->
+	<!-- class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"> -->
+	<!-- <property name="dataSource" ref="dataSource" /> -->
+	<!-- <property name="packagesToScan" value="entity" /> -->
+	<!-- <property name="hibernateProperties"> -->
+	<!-- <props> -->
+	<!-- <prop key="hibernate.connection.pool_size">1</prop> -->
+	<!-- <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> -->
+	<!-- <prop key="hibernate.current_session_context_class">thread</prop> -->
+	<!-- <prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop> -->
+	<!-- <prop key="hibernate.show_sql">true</prop> -->
+	<!-- </props> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+
+
+
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+	<!-- <property name="driverClassName" -->
+	<!-- value="org.postgresql.Driver"/> -->
+	<!-- <property name="url" value="jdbc:postgresql://ec2-107-20-104-234.compute-1.amazonaws.com:5432/d3oikn5k0298sq?sslmode=require"/> -->
+	<!-- <property name="username" value="xrrkyrcbtwrbpy"/> -->
+	<!-- <property name="password" value="49df2f382e8daa178bdc9ca88e1a11e6a08254613951efd0a288894fda70788c"/> -->
+	<!-- </bean> -->
+
+
+
+
+
+	<!-- Cấu hình đối tượng productDAO sử dụng trong controller -->
+	<bean id="productDAO" class="model.ProductDAOimpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<mvc:resources mapping="/public/**" location="/public/"></mvc:resources>
+
+	<mvc:resources mapping="/views/**"
+		location="/WEB-INF/views/"></mvc:resources>
+
+	<!-- Khai báo package chứa các controller (điều hướng) -->
+	<context:component-scan
+		base-package="controller" />
+
+	<!-- Khai báo thư mục view (file web jsp) phụ trách hiển thị -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+</beans>
