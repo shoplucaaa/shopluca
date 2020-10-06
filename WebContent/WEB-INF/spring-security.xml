@@ -17,10 +17,10 @@
 			access="permitAll" />
 		<sec:intercept-url pattern="/adminlogin"
 			access="permitAll" />
-		<sec:intercept-url pattern="/editproduct"
+<!-- 		<sec:intercept-url pattern="/editproduct"
 			access="isAuthenticated()" />
 		<sec:intercept-url pattern="/updateproduct"
-			access="isAuthenticated()" />
+			access="isAuthenticated()" /> -->
 <!-- 		<sec:intercept-url pattern="/**" -->
 <!-- 			access="isAuthenticated()" /> -->
 		<sec:logout logout-url="/logout"
