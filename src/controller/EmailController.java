@@ -28,14 +28,9 @@ public class EmailController {
 	
 
 
-	
-	
-	
-	
-	
-//    private static final String SMTP_SERVER = "smtp.gmail.com";
-//    private static final String USERNAME = "vutunam994@gmail.com";
-//    private static final String PASSWORD = "VuxTuxNam";
+    private static final String SMTP_SERVER = "smtp.gmail.com";
+    private static final String USERNAME = "vutunam994@gmail.com";
+    private static final String PASSWORD = "VuxTuxNam";
 
     
 //   appp password iaevexxgzjmiftqj
@@ -86,9 +81,9 @@ public class EmailController {
 		}
 		
 		
-		   String SMTP_SERVER = "smtp.gmail.com";
-		   String USERNAME = (String) prop.get("email.user");
-		   String PASSWORD = (String) prop.get("email.password");
+//		   String SMTP_SERVER = "smtp.gmail.com";
+//		   String USERNAME = (String) prop.get("email.user");
+//		   String PASSWORD = (String) prop.get("email.password");
 		
         prop.put("mail.smtp.host", SMTP_SERVER); //optional, defined in SMTPTransport
         prop.put("mail.smtp.auth", "true");
