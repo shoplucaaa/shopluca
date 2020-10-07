@@ -239,7 +239,7 @@
 	</header>
 	<!--/ End Header -->
 	<div class="login">
-		<form action="login" name="myform" method="post" onsubmit="return validateform()>
+		<form action="login" name="myform" method="post" onsubmit="return validateform()">
 			<table>
 				<tr>
 					<td colspan="2">
@@ -278,10 +278,10 @@
 						style="color: white; margin: 15px; border-radius: 5px;">Tro ve</a>
 					</td>
 				</tr>
-
-			</table>
 			<input type="hidden" name="${_csrf.parameterName}"
 				value="${_csrf.token}" />
+			</table>
+
 		</form>
 	</div>
 
