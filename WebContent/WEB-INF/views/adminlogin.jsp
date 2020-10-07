@@ -82,12 +82,11 @@
 </style>
 
 <script>
-	document.getElementById("btn-submit").addEventListener("click",
-			validateform());
+//	document.getElementById("btn-submit").addEventListener("click", validateform());
 	function validateform() {
 		var username = document.myform.username.value;
 		var pass = document.myform.pass.value;
-		var retypepass = document.myform.retypepass.value;
+//		var retypepass = document.myform.retypepass.value;
 		var result = document.getElementById('result');
 
 		//rang buoc username
@@ -240,7 +239,7 @@
 	</header>
 	<!--/ End Header -->
 	<div class="login">
-		<form action="login" name="myform" method="post">
+		<form action="login" name="myform" method="post" onsubmit="return validateform()>
 			<table>
 				<tr>
 					<td colspan="2">
