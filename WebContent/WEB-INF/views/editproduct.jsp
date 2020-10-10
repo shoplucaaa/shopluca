@@ -296,7 +296,7 @@
 		<div class="add-product">
 			<h2 class="heading-block">Thêm sản phẩm</h2>
 			<div class="addprod">
-				<form:form action="addnewproduct" modelAttribute="s"
+				<form:form action="addnewproduct${_csrf.parameterName}=${_csrf.token}" modelAttribute="s"
 					enctype="multipart/form-data">
 
 					<table class="insert">
