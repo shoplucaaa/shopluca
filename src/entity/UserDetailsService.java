@@ -24,9 +24,11 @@ public class UserDetailsService implements org.springframework.security.core.use
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
 					PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-
+					System.out.println(System.getenv("password"));
+					System.out.println(System.getenv("role"));
+		
 					String pas = encoder.encode(System.getenv("password"));
-
+					System.out.println(pas;
 //					String encoded = new BCryptPasswordEncoder().encode(userRow[1]);
 
 					System.out.println(System.getenv("username"));
