@@ -278,10 +278,10 @@
 						style="color: white; margin: 15px; border-radius: 5px;">Tro ve</a>
 					</td>
 				</tr>
+
+			</table>
 			<input type="hidden" name="${_csrf.parameterName}"
 				value="${_csrf.token}" />
-			</table>
-
 		</form>
 	</div>
 
