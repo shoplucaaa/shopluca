@@ -23,7 +23,20 @@ public class UserDetailsService implements org.springframework.security.core.use
 
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-		String fileName = "users.csv";
+					PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+
+					String pas = encoder.encode(System.getenv("password"));
+
+//					String encoded = new BCryptPasswordEncoder().encode(userRow[1]);
+
+					System.out.println(System.getenv("username"));
+//					String pas1 = encoder.encode("password");
+					
+
+					
+					return new User(System.getenv("username"), pas, AuthorityUtils.createAuthorityList(System.getenv("role")));
+
+/* 		String fileName = "users.csv";
 
 		ClassLoader classLoader = this.getClass().getClassLoader();
 		InputStream inputStream = classLoader.getResourceAsStream(fileName);
@@ -61,16 +74,16 @@ public class UserDetailsService implements org.springframework.security.core.use
 //				      }
 //				      myReader.close();
 					
-					String pas = encoder.encode(userRow[1]);
+					String pas = encoder.encode(System.getenv("password"));
 
 //					String encoded = new BCryptPasswordEncoder().encode(userRow[1]);
 
-
+					System.getenv("username");
 //					String pas1 = encoder.encode("password");
 					
 
 					br.close();
-					return new User(userRow[0], pas, AuthorityUtils.createAuthorityList(userRow[2]));
+					return new User(System.getenv("username"), pas, AuthorityUtils.createAuthorityList(System.getenv("role")));
 //					return new User("admin", pas1, AuthorityUtils.createAuthorityList("ADMIN"));
 				}
 			}
@@ -78,7 +91,7 @@ public class UserDetailsService implements org.springframework.security.core.use
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		throw new UsernameNotFoundException("Not Found: " + username);
+		throw new UsernameNotFoundException("Not Found: " + username); */
 
 	}
 
