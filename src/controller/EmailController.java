@@ -29,8 +29,8 @@ public class EmailController {
 
 
     private static final String SMTP_SERVER = "smtp.gmail.com";
-    private static final String USERNAME = "vutunam994@gmail.com";
-    private static final String PASSWORD = "VuxTuxNam";
+    private static final String USERNAME = System.getenv("email");
+    private static final String PASSWORD = System.getenv("emailp");
 
     
 //   appp password iaevexxgzjmiftqj
@@ -47,7 +47,7 @@ public class EmailController {
     public String sendemail(@RequestParam(name = "message") String message, @RequestParam(name = "contact") String contact, @RequestParam(name = "email") String email, @RequestParam(name = "subject") String subject, @RequestParam(name = "name") String name, Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr)  {
    	
     	String EMAIL_FROM = email;
-        String EMAIL_TO = "vutunam994@gmail.com";
+        String EMAIL_TO = System.getenv("email");
         String EMAIL_TO_CC = "";
 
         String EMAIL_SUBJECT = subject;
