@@ -65,7 +65,7 @@
 
 	<bean id="formLoginFailureHandler"
 		class="org.springframework.security.web.authentication.ExceptionMappingAuthenticationFailureHandler">
-		<property name="defaultFailureUrl" value="/adminlogin?err" />
+		<property name="defaultFailureUrl" value="/adminlogin?error" />
 	</bean>
 
 	<bean id="siteminderFilter"

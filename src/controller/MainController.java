@@ -40,11 +40,15 @@ public class MainController {
 	
 	@RequestMapping("/adminlogin")
 	public String adminlogin(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
-		String err = request.getParameter("err");
+		
+		
+		String err = request.getParameter("error");
 		
 		if (err != null) {
-			 m.addAttribute("msg", "Đăng nhập thất bại");
-		};
+			m.addAttribute("msg", "Đăng nhập thất bại");
+		}else {
+			m.addAttribute("msg", "Đăng nhập để tiếp tục");
+		}
 		
 	return "adminlogin";
 }

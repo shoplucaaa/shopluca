@@ -246,11 +246,6 @@
 						<h2>Đăng nhập</h2>
 					</td>
 				</tr>
-				<tr>
-					<td colspan="2">
-						<h2 style="color:red;">${msg}</h2>
-					</td>
-				</tr>
 
 				<tr>
 					<td style="padding-left:">Tên đăng nhập</td>
@@ -269,7 +264,7 @@
 				<!-- 			</tr> -->
 				<tr>
 					<td colspan="2" class="result">
-						<p id="result">Đăng nhập để tiếp tục</p>
+						<p id="result">${msg}</p>
 					</td>
 				</tr>
 				<tr>
