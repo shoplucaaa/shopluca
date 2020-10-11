@@ -37,9 +37,9 @@ public class MainController {
 
 
 	
-	@RequestMapping("/adminlogin")
+	@RequestMapping(value = "/adminlogin", params = {"err"})
 	public String adminlogin(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
-		
+		model.addAttribute("msg", "Invalid username and password.");
 	return "adminlogin";
 }
 	
