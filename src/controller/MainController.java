@@ -63,7 +63,7 @@ public class MainController {
 	return new RedirectView("editproduct");
 }
 	
-	@RequestMapping("/logout")
+/*	@RequestMapping("/logout")
 	public String logout(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
 		try {
 			request.logout();
@@ -73,7 +73,7 @@ public class MainController {
 		}	
 		
 	return "redirect:/";
-	}
+	}*/
 	
 	
 	@RequestMapping("/contact")
