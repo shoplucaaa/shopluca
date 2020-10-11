@@ -90,7 +90,7 @@
 					<div class="row">
 						<div class="col-lg-3" style="background-color: black;">
 							<div class="all-category">
-								<h3 class="cat-heading">SHOPLUKA</h3>
+								<h3  class="cat-heading"><a style="font-weight: 600;" href="<c:url value="/"/>">SHOPLUKA</a></h3>
 							</div>
 						</div>
 						<div class="col-lg-9 col-12" style="background-color: black;">
@@ -101,9 +101,9 @@
 										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav"
 												style="float: right;">
-												<li class="active"><a href="index">Home</a></li>
-												<li><a href="product">Product<span class="new">New</span></a></li>
-												<li><a href="contact">Contact Us</a></li>
+												<li class="active"><a href="<c:url value="/"/>">Trang chủ</a></li>
+												<li><a href="<c:url value="/product"/>">Sản phẩm<span class="new">Mới</span></a></li>
+												<li><a href="contact">Liên hệ</a></li>
 											</ul>
 										</div>
 									</div>
@@ -141,7 +141,7 @@
 											maboriosm.
 										</p>
 										<div class="button">
-											<a href="#product area" class="btn">Shop Now!</a>
+											<a href="#productarea" class="btn">Mua ngay!</a>
 										</div>
 									</div>
 								</div>
@@ -170,7 +170,7 @@
 							<h3>
 								Summer travel <br> collection
 							</h3>
-							<a href="#">Discover Now</a>
+							<a href="#productarea">Discover Now</a>
 						</div>
 					</div>
 				</div>
@@ -186,7 +186,7 @@
 							<h3>
 								Awesome Bag <br> 2020
 							</h3>
-							<a href="#">Shop Now</a>
+							<a href="#productarea">Shop Now</a>
 						</div>
 					</div>
 				</div>
@@ -202,7 +202,7 @@
 							<h3>
 								Mid Season <br> Up to <span>40%</span> Off
 							</h3>
-							<a href="#">Discover Now</a>
+							<a href="#productarea">Discover Now</a>
 						</div>
 					</div>
 				</div>
@@ -213,13 +213,13 @@
 	<!-- End Small Banner -->
 
 	<!-- Start Product Area -->
-	<div class="product-area section" id="product area">
+	<div class="product-area section" id="productarea">
 		<div class="container">
 			<div class="row">
 
 				<div class="col-12">
 					<div class="section-title">
-						<h2>Trending Item</h2>
+						<h2>Sản phẩm</h2>
 					</div>
 				</div>
 			</div>
@@ -543,7 +543,7 @@
 								<p class="text">Suspendisse massa leo, vestibulum cursus
 									nulla sit amet, frungilla placerat lorem. Cars fermentum,
 									sapien.</p>
-								<h1 class="price">$1200</h1>
+								<h1 class="price">$1200 <s>$1890</s></h1>
 								<div class="coming-time">
 									<div class="clearfix" data-countdown="2021/02/30"></div>
 								</div>

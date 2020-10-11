@@ -209,7 +209,7 @@
 					<div class="row">
 						<div class="col-lg-3" style="background-color: black;">
 							<div class="all-category">
-								<h3  class="cat-heading"><a href="index">SHOPLUKA</a></h3>
+								<h3  class="cat-heading"><a style="font-weight: 600;" href="<c:url value="/"/>">SHOPLUKA</a></h3>
 							</div>
 						</div>
 						<div class="col-lg-9 col-12" style="background-color: black;">
@@ -220,9 +220,9 @@
 										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav"
 												style="float: right;">
-												<li class="active"><a href="index">Home</a></li>
-												<li><a href="product">Product<span class="new">New</span></a></li>
-												<li><a href="contact">Contact Us</a></li>
+												<li class="active"><a href="<c:url value="/"/>">Trang chủ</a></li>
+												<li><a href="<c:url value="/product"/>">Sản phẩm<span class="new">Mới</span></a></li>
+												<li><a href="contact">Liên hệ</a></li>
 											</ul>
 										</div>
 									</div>
@@ -243,7 +243,7 @@
 			<table>
 				<tr>
 					<td colspan="2">
-						<h2>Login</h2>
+						<h2>Đăng nhập</h2>
 					</td>
 				</tr>
 				<tr>
@@ -253,12 +253,12 @@
 				</tr>
 
 				<tr>
-					<td style="padding-left:">Username</td>
+					<td style="padding-left:">Tên đăng nhập</td>
 					<td><input type="text" name="username" id="username"
 						placeholder="Input name" /></td>
 				</tr>
 				<tr>
-					<td>Password</td>
+					<td>Mật khẩu</td>
 					<td><input type="password" name="password" id="pass"
 						placeholder="Enter Password" /></td>
 				</tr>
@@ -269,18 +269,18 @@
 				<!-- 			</tr> -->
 				<tr>
 					<td colspan="2" class="result">
-						<p id="result">Check login</p>
+						<p id="result">Đăng nhập để tiếp tục</p>
 					</td>
 				</tr>
 				<tr>
 					<td class="sendbutton" colspan="2">
 						<button type="submit" id="btn-submit" class="btn-submit">
-							Dang nhap</button>
+							Đăng nhập</button>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2"><a href="index" class="btn btn-primary"
-						style="color: white; margin: 15px; border-radius: 5px;">Tro ve</a>
+						style="color: white; margin: 15px; border-radius: 5px;">Trở về</a>
 					</td>
 				</tr>
 
@@ -331,7 +331,7 @@
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
-							<h4>Get In Tuch</h4>
+							<h4>Liên hệ</h4>
 							<!-- Single Widget -->
 							<div class="contact">
 								<ul>
@@ -362,7 +362,7 @@
 						<div class="col-lg-6 col-12">
 							<div class="left">
 								<p>
-									Copyright © 2020 <a href="http://www.wpthemesgrid.com"
+									Copyright © 2020 <a href="#"
 										target="_blank">Wpthemesgrid</a> - All Rights Reserved.
 								</p>
 							</div>

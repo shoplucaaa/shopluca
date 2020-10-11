@@ -53,6 +53,15 @@ public class MainController {
 	return new RedirectView("editproduct");
 }
 	
+	@RequestMapping("/logout")
+	public String logout(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
+		try {
+			request.logout();
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
 	
 	
 	

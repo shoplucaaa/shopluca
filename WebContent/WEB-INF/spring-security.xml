@@ -13,6 +13,7 @@
 
 	<sec:http auto-config="false" use-expressions="true"
 		entry-point-ref="loginUrlAuthenticationEntryPoint">
+		<sec:csrf disabled="true"/>
 		<sec:intercept-url pattern="/index"
 			access="permitAll" />
 		<sec:intercept-url pattern="/adminlogin"
