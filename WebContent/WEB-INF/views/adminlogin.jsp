@@ -246,6 +246,11 @@
 						<h2>Login</h2>
 					</td>
 				</tr>
+				<tr>
+					<td colspan="2">
+						<h2 style="color:red;">${msg}</h2>
+					</td>
+				</tr>
 
 				<tr>
 					<td style="padding-left:">Username</td>
