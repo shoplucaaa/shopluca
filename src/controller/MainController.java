@@ -62,7 +62,8 @@ public class MainController {
 			e.printStackTrace();
 		}	
 		
-	
+	return "redirect:/";
+	}
 	
 	
 	@RequestMapping("/contact")
