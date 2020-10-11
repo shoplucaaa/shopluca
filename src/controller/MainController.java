@@ -39,7 +39,7 @@ public class MainController {
 	
 	@RequestMapping(value = "/adminlogin", params = {"err"})
 	public String adminlogin(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
-		model.addAttribute("msg", "Lỗi đăng nhập");
+		m.addAttribute("msg", "Lỗi đăng nhập");
 	return "adminlogin";
 }
 	
