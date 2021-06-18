@@ -214,7 +214,7 @@
 					<div class="row">
 						<div class="col-lg-3" style="background-color: black;">
 							<div class="all-category">
-								<h3  class="cat-heading"><a style="font-weight: 600;" href="<c:url value="/"/>">SHOPLUKA</a></h3>
+								<h3 class="cat-heading">SHOPLUKA</h3>
 							</div>
 						</div>
 						<div class="col-lg-9 col-12" style="background-color: black;">
@@ -225,11 +225,9 @@
 										<div class="nav-inner">
 											<ul class="nav main-menu menu navbar-nav"
 												style="float: right;">
-												
-												<li><a href="<c:url value="/"/>">Trang chủ</a></li>
-												<li class="active"><a href="<c:url value="/product"/>">Sản phẩm<span class="new">Mới</span></a></li>
-												<li><a href="contact">Liên hệ</a></li>
-												<li><a href="logout">Đăng xuất</a></li>
+												<li class="active"><a href="#">Home</a></li>
+												<li><a href="product">Product<span class="new">New</span></a></li>
+												<li><a href="contact">Contact Us</a></li>
 											</ul>
 										</div>
 									</div>
@@ -298,7 +296,7 @@
 		<div class="add-product">
 			<h2 class="heading-block">Thêm sản phẩm</h2>
 			<div class="addprod">
-				<form:form action="addnewproduct?${_csrf.parameterName}=${_csrf.token}" modelAttribute="s"
+				<form:form action="addnewproduct" modelAttribute="s"
 					enctype="multipart/form-data">
 
 					<table class="insert">
@@ -331,8 +329,9 @@
 										path="price" /></span></td>
 
 
-							<td><form:radiobutton path="status" value="false" />Hết hàng
-								<form:radiobutton path="status" value="true" checked="checked"/>Còn hàng</td>
+							<td><form:radiobutton path="status" value="true"
+									checked="checked" />Còn hàng <form:radiobutton path="status"
+									value="false" />Hết hàng</td>
 
 
 							<td><img id="addedimage" src="#" alt="Thêm ảnh" /> <form:input

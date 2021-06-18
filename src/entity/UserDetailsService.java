@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.util.ResourceUtils;
 
 public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
 
@@ -22,30 +23,63 @@ public class UserDetailsService implements org.springframework.security.core.use
 //	ServletContext context;
 
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-				if (StringUtils.equals(username, System.getenv("username"))) {
-					
-					System.out.println(username + " was Found.");
-					PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-					System.out.println(System.getenv("password"));
-					System.out.println(System.getenv("role"));
+
+		String fileName = "users.csv";
+
+		ClassLoader classLoader = this.getClass().getClassLoader();
+		InputStream inputStream = classLoader.getResourceAsStream("/" + fileName);
+		InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+		BufferedReader br = new BufferedReader(streamReader);
 		
-					String pas = encoder.encode(System.getenv("password"));
-					System.out.println(pas);
+
+		
+//		Resource usersCsv = context.getResource("users.csv");
+		System.out.println(streamReader);
+		try {
+//			BufferedReader br = new BufferedReader(new FileReader(usersCsv.getFile()));
+			String line;
+			while ((line = br.readLine()) != null) {
+				System.out.println(line);
+				String[] userRow = line.split(",", 0);
+				if (StringUtils.equals(username, userRow[0])) {
+					System.out.println(username + " was Found.");
+
+					PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+
+//					PasswordEncoder pencoder = new BCryptPasswordEncoder();
+					
+					
+
+//					WebApplicationContext wac = WebApplicationContextUtils.getRequiredWebApplicationContext(null);
+//					
+//					String pathh = wac.getServletContext().getRealPath("WEB-INF/");
+//					
+//					File myObj = new File(pathh + "users.csv");
+//					
+//					
+//					 Scanner myReader = new Scanner(myObj);
+//				      while (myReader.hasNextLine()) {
+//				        String data = myReader.nextLine();
+//				        System.out.println(data);
+//				      }
+//				      myReader.close();
+					
+					String pas = encoder.encode(userRow[1]);
+
 //					String encoded = new BCryptPasswordEncoder().encode(userRow[1]);
 
-					System.out.println(System.getenv("username"));
-//					String pas1 = encoder.encode("password");
-					
+					String pas1 = encoder.encode("password");
 
-					
-					return new User(System.getenv("username"), pas, AuthorityUtils.createAuthorityList(System.getenv("role")));
-					
-					
-				}else {
-				throw new UsernameNotFoundException("Not Found: " + username);
-				
+					br.close();
+//					return new User(userRow[0], pas, AuthorityUtils.createAuthorityList(userRow[2]));
+					return new User("admin", pas1, AuthorityUtils.createAuthorityList("ADMIN"));
 				}
+			}
 
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		throw new UsernameNotFoundException("Not Found: " + username);
 
 	}
 
