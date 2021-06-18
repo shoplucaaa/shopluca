@@ -59,6 +59,8 @@ public class ProductController {
 
 		List<Product> list = productDAO.selectAll();
 		m.addAttribute("list", list);
+		
+		request.getSession().setMaxInactiveInterval(600);
 
 		return "editproduct";
 	}
@@ -149,7 +151,7 @@ public class ProductController {
 	public String update(@Valid @ModelAttribute Product s, BindingResult result, Model m, HttpServletRequest request) {
 		List<Product> list = productDAO.selectAll();
 		
-
+		
 		
 		String oldfilename = null;
 		ServletFileUpload sfu = new ServletFileUpload(new DiskFileItemFactory());
@@ -239,7 +241,9 @@ public class ProductController {
 		m.addAttribute("s", s);
 
 		boolean isSuccess = productDAO.update(s);
-
+		
+		request.getSession().setMaxInactiveInterval(600);
+		
 		if (isSuccess) {
 			return "redirect:editproduct";
 		} else {

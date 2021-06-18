@@ -30,12 +30,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.2.0</version>
-<!-- 				<configuration> -->
-<!-- 					<port>8080</port> -->
-<!-- 					<path>/</path> -->
-<!-- 					<warSourceDirectory>WebContent</warSourceDirectory> -->
-<!-- 				</configuration> -->
+				<version>2.3</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -47,36 +42,32 @@
 								<artifactItem>
 									<groupId>com.heroku</groupId>
 									<artifactId>webapp-runner</artifactId>
-									<version>9.0.41.0</version>
+									<version>9.0.30.0</version>
 									<destFileName>webapp-runner.jar</destFileName>
 								</artifactItem>
 							</artifactItems>
-							<!-- <port>8080</port> -->
-							<!-- <path>/</path> -->
-							<!-- <warSourceDirectory>WebContent</warSourceDirectory> -->
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
 			<plugin>
-			<artifactId>maven-war-plugin</artifactId>
-			<version>3.3.1</version>
-			<configuration>
-			<warSourceDirectory>WebContent</warSourceDirectory>
-			</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<warSourceDirectory>WebContent</warSourceDirectory>
 				</configuration>
 			</plugin>
-
-
+			
+							<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.0</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+			
 		</plugins>
 
 	</build>
@@ -97,15 +88,6 @@
 			<version>5.3.8</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>4.0.1</version>
-			<scope>provided</scope>
-		</dependency>
-
-
 		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 		<dependency>
 			<groupId>javax.validation</groupId>
@@ -125,6 +107,14 @@
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
+		</dependency>
+		
+				<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- Tích hợp thư viện Hibernate -->
@@ -189,13 +179,13 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
-			<version>5.5.0</version>
+			<version>5.4.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
-			<version>5.5.0</version>
+			<version>5.4.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
@@ -216,9 +206,9 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.11</version>
 		</dependency>
-
-
-
+		
+		
+		
 		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>

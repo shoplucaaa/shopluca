@@ -1235,6 +1235,8 @@ Version:1.0
 	font-weight: 700;
 	color: #F7941D;
 	margin-bottom: 20px;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
 }
 .hero-slider .hero-text h1 span {
 	font-size: 20px;
@@ -1765,6 +1767,7 @@ Version:1.0
 }
 .single-product .product-img a img {
   width: 100%;
+  margin-bottom: 20px;
 }
 .single-product .product-img a img.hover-img {
   position: absolute;

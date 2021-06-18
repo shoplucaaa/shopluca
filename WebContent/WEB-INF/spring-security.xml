@@ -13,6 +13,7 @@
 
 	<sec:http auto-config="false" use-expressions="true"
 		entry-point-ref="loginUrlAuthenticationEntryPoint">
+		<sec:csrf disabled="true"/>
 		<sec:intercept-url pattern="/index"
 			access="permitAll" />
 		<sec:intercept-url pattern="/adminlogin"
@@ -24,7 +25,7 @@
 <!-- 		<sec:intercept-url pattern="/**" -->
 <!-- 			access="isAuthenticated()" /> -->
 		<sec:logout logout-url="/logout"
-			logout-success-url="/index" invalidate-session="true" />
+			logout-success-url="/" invalidate-session="true" />
 		<sec:custom-filter position="PRE_AUTH_FILTER"
 			ref="siteminderFilter" />
 		<sec:custom-filter position="FORM_LOGIN_FILTER"

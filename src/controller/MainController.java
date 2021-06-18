@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Properties;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -40,6 +41,15 @@ public class MainController {
 	@RequestMapping("/adminlogin")
 	public String adminlogin(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
 		
+		
+		String err = request.getParameter("error");
+		
+		if (err != null) {
+			m.addAttribute("msg", "Đăng nhập thất bại");
+		}else {
+			m.addAttribute("msg", "Đăng nhập để tiếp tục");
+		}
+		
 	return "adminlogin";
 }
 	
@@ -53,7 +63,17 @@ public class MainController {
 	return new RedirectView("editproduct");
 }
 	
-	
+/*	@RequestMapping("/logout")
+	public String logout(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
+		try {
+			request.logout();
+		} catch (ServletException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+	return "redirect:/";
+	}*/
 	
 	
 	@RequestMapping("/contact")
