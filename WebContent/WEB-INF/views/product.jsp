@@ -301,12 +301,9 @@ table, th, td {
 								<a href="index"><img
 									src="<c:url value="/views/images/logo2.png"></c:url>" alt="#"></a>
 							</div>
-							<p class="text">Praesent dapibus, neque id cursus ucibus,
-								tortor neque egestas augue, magna eros eu erat. Aliquam erat
-								volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
-								facilisis luctus, metus.</p>
+							<p class="text">SHOPLUKA là doanh nghiệp chuyên cung cấp thiết bị, giải pháp về máy tính, thiết bị chơi game, thiết bị công nghệ cao cấp hàng đầu Việt Nam.</p>
 							<p class="call">
-								Got Question? Call us 24/7<span><a href="tel:123456789">+0123
+								Nếu có thắc mắc xin gọi 24/7<span><a href="tel:123456789">+0123
 										456 789</a></span>
 							</p>
 						</div>
