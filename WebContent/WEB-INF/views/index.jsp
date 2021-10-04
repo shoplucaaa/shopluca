@@ -311,8 +311,7 @@
 
 																<div class="product-action-2">
 																	<a title="Add to cart" data-toggle="modal"
-																		data-target="#${s.id}" title="Quick View" href="#">Click
-																		for more info</a>
+																		data-target="#${s.id}" title="Quick View" href="#">Nhấn vào để xem chi tiết</a>
 																</div>
 															</div>
 														</div>
@@ -356,8 +355,7 @@
 
 																<div class="product-action-2">
 																	<a title="Add to cart" data-toggle="modal"
-																		data-target="#${s.id}" title="Quick View" href="#">Click
-																		for more info</a>
+																		data-target="#${s.id}" title="Quick View" href="#">Nhấn vào để xem chi tiết</a>
 																</div>
 															</div>
 														</div>
@@ -400,8 +398,7 @@
 
 																<div class="product-action-2">
 																	<a title="Add to cart" data-toggle="modal"
-																		data-target="#${s.id}" title="Quick View" href="#">Click
-																		for more info</a>
+																		data-target="#${s.id}" title="Quick View" href="#">Nhấn vào để xem chi tiết</a>
 																</div>
 															</div>
 														</div>
@@ -444,8 +441,7 @@
 
 																<div class="product-action-2">
 																	<a title="Add to cart" data-toggle="modal"
-																		data-target="#${s.id}" title="Quick View" href="#">Click
-																		for more info</a>
+																		data-target="#${s.id}" title="Quick View" href="#">Nhấn vào để xem chi tiết</a>
 																</div>
 															</div>
 														</div>
@@ -488,8 +484,7 @@
 
 																<div class="product-action-2">
 																	<a title="Add to cart" data-toggle="modal"
-																		data-target="#${s.id}" title="Quick View" href="#">Click
-																		for more info</a>
+																		data-target="#${s.id}" title="Quick View" href="#">Nhấn vào để xem chi tiết</a>
 																</div>
 															</div>
 														</div>
@@ -674,7 +669,7 @@
 													class="yellow fa fa-star"></i> <i class="yellow fa fa-star"></i>
 												<i class="yellow fa fa-star"></i> <i class="fa fa-star"></i>
 											</div>
-											<a href="#"> (1 customer review)</a>
+											<a href="#"> (1 review)</a>
 										</div>
 										<div class="quickview-stock">
 											<span><i class="fa fa-check-circle-o"></i> ${s.status? "Còn hàng" : "Hết hàng"}</span>
@@ -687,7 +682,7 @@
 									<div class="size">
 										<div class="row">
 											<div class="col-lg-6 col-12">
-												<h5 class="title">Color</h5>
+												<h5 class="title">Màu</h5>
 												<select>
 													<option selected="selected">orange</option>
 													<option>purple</option>
@@ -698,12 +693,12 @@
 										</div>
 									</div>
 									<div class="add-to-cart">
-										<a href="#" class="btn">Add to cart</a> <a href="#"
+										<a href="#" class="btn">Thêm</a> <a href="#"
 											class="btn min"><i class="ti-heart"></i></a> <a href="#"
 											class="btn min"><i class="fa fa-compress"></i></a>
 									</div>
 									<div class="default-social">
-										<h4 class="share-now">Share:</h4>
+										<h4 class="share-now">Chia sẻ</h4>
 										<ul>
 											<li><a class="facebook" href="#"><i
 													class="fa fa-facebook"></i></a></li>
