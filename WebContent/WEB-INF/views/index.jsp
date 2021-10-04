@@ -133,12 +133,11 @@
 								<div class="col-lg-7 col-12">
 									<div class="hero-text">
 										<h1>
-											<span>UP TO 50% OFF </span>Shirt For Man
+											<span> GIẢM ĐẾN 50% </span>Link kiện máy tính
 										</h1>
 										<p>
-											Maboriosam in a nesciung eget magnae <br> dapibus
-											disting tloctio in the find it pereri <br> odiy
-											maboriosm.
+											Linh Kiện PC chính hãng, giá rẻ, phục vụ mọi nhu cầu xây dựng cấu hình <br>
+											HANOICOMPUTER có đầy đủ các loại mặt hàng <br> Nhấn để "mua ngay" để xem chi tiết
 										</p>
 										<div class="button">
 											<a href="#productarea" class="btn">Mua ngay!</a>
@@ -166,11 +165,11 @@
 							src="https://i.pinimg.com/originals/b1/54/c0/b154c0000fc4d435a6f72ef897696db8.jpg"
 							alt="#">
 						<div class="content">
-							<p>Man's Collectons</p>
+							<p>Chuột</p>
 							<h3>
-								Summer travel <br> collection
+								Khuyến mãi <br> 50%
 							</h3>
-							<a href="#productarea">Discover Now</a>
+							<a href="#productarea">Xem thêm</a>
 						</div>
 					</div>
 				</div>
@@ -182,11 +181,11 @@
 							src="https://www.extremetech.com/wp-content/uploads/2020/01/TAE07156_Edit.jpg"
 							alt="#">
 						<div class="content">
-							<p>Bag Collectons</p>
+							<p>Bàn phím</p>
 							<h3>
-								Awesome Bag <br> 2020
+								Giảm ngay<br> 100 000
 							</h3>
-							<a href="#productarea">Shop Now</a>
+							<a href="#productarea">Xem thêm</a>
 						</div>
 					</div>
 				</div>
@@ -198,11 +197,11 @@
 							src="https://luxurylaunches.com/wp-content/uploads/2020/01/gold-keyboard-2.jpg"
 							alt="#">
 						<div class="content">
-							<p>Flash Sale</p>
+							<p>Phụ kiện</p>
 							<h3>
-								Mid Season <br> Up to <span>40%</span> Off
+								Đại hạ giá <br> Giảm sâu tới <span>40%</span>
 							</h3>
-							<a href="#productarea">Discover Now</a>
+							<a href="#productarea">Xem thêm</a>
 						</div>
 					</div>
 				</div>
@@ -538,14 +537,12 @@
 					<div class="col-lg-6 col-12 padding-left">
 						<div class="content">
 							<div class="heading-block">
-								<p class="small-title">Deal of day</p>
-								<h3 class="title">Beatutyful dress for women</h3>
-								<p class="text">Suspendisse massa leo, vestibulum cursus
-									nulla sit amet, frungilla placerat lorem. Cars fermentum,
-									sapien.</p>
-								<h1 class="price">$1200 <s>$1890</s></h1>
+								<p class="small-title">Khuyến mãi trong tháng</p>
+								<h3 class="title">Bàn phím cơ AAA</h3>
+								<p class="text">Quá nhàm chán với những chiếc bàn phím văn phòng, cảm giác ấn không đã, thiết kế không đủ ngầu, không có bàn phím LED... Đó là lúc bạn nên tìm đến một bộ bàn phím cơ</p>
+								<h1 class="price">$200 <s>$400</s></h1>
 								<div class="coming-time">
-									<div class="clearfix" data-countdown="2021/02/30"></div>
+									<div class="clearfix" data-countdown="2021/10/30"></div>
 								</div>
 							</div>
 						</div>
@@ -566,8 +563,8 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-rocket"></i>
-						<h4>Free shiping</h4>
-						<p>Orders over $100</p>
+						<h4>Miễn phí ship</h4>
+						<p>cho đơn hàng từ $100</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -575,8 +572,8 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-reload"></i>
-						<h4>Free Return</h4>
-						<p>Within 30 days returns</p>
+						<h4>Dịch vụ bảo hành</h4>
+						<p>Đổi trả trong vòng 1 tháng</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -584,8 +581,8 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-lock"></i>
-						<h4>Sucure Payment</h4>
-						<p>100% secure payment</p>
+						<h4>Đảm bảo thanh toán</h4>
+						<p>100% chuyển khoản an toàn</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -593,8 +590,8 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-tag"></i>
-						<h4>Best Peice</h4>
-						<p>Guaranteed price</p>
+						<h4>Giá cả tốt nhất</h4>
+						<p>Đảm bảo tính cạnh tranh</p>
 					</div>
 					<!-- End Single Service -->
 				</div>
@@ -611,16 +608,15 @@
 					<div class="col-lg-8 offset-lg-2 col-12">
 						<!-- Start Newsletter Inner -->
 						<div class="inner">
-							<h4>Newsletter</h4>
+							<h4>Đăng ký email</h4>
 							<p>
-								Subscribe to our newsletter and get <span>10%</span> off your
-								first purchase
+								Đăng ký bằng email và nhận tới <span>10%</span>  cho đơn hàng đầu tiên
 							</p>
 							<form action="mail/mail.php" method="get" target="_blank"
 								class="newsletter-inner">
 								<input name="EMAIL" placeholder="Your email address"
 									type="email">
-								<button class="btn">Subscribe</button>
+								<button class="btn">Đăng ký</button>
 							</form>
 						</div>
 						<!-- End Newsletter Inner -->
@@ -748,12 +744,9 @@
 								<a href="index"><img
 									src="<c:url value="/views/images/logo2.png"></c:url>" alt="#"></a>
 							</div>
-							<p class="text">Praesent dapibus, neque id cursus ucibus,
-								tortor neque egestas augue, magna eros eu erat. Aliquam erat
-								volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
-								facilisis luctus, metus.</p>
+							<p class="text">SHOPLUKA là doanh nghiệp chuyên cung cấp thiết bị, giải pháp về máy tính, thiết bị chơi game, thiết bị công nghệ cao cấp hàng đầu Việt Nam.</p>
 							<p class="call">
-								Got Question? Call us 24/7<span><a href="tel:123456789">+0123
+								Nếu có thắc mắc xin gọi 24/7<span><a href="tel:123456789">+0123
 										456 789</a></span>
 							</p>
 						</div>
@@ -774,7 +767,7 @@
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
-							<h4>Get In Tuch</h4>
+							<h4>Địa chỉ</h4>
 							<!-- Single Widget -->
 							<div class="contact">
 								<ul>
