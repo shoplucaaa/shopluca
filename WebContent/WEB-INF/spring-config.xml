@@ -109,9 +109,13 @@
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver"/>
-		<property name="url" value="jdbc:postgresql://ec2-107-20-104-234.compute-1.amazonaws.com:5432/d3oikn5k0298sq?sslmode=require"/>
+	<!--	<property name="url" value="jdbc:postgresql://ec2-107-20-104-234.compute-1.amazonaws.com:5432/d3oikn5k0298sq?sslmode=require"/> 
+		<property name="username" value="xrrkyrcbtwrbpy"/>
+		<property name="password" value="49df2f382e8daa178bdc9ca88e1a11e6a08254613951efd0a288894fda70788c"/>-->
+		<property name="url" value="jdbc:postgresql://ec2-107-20-104-234.compute-1.amazonaws.com:5432/d3oikn5k0298sq?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"/> 
 		<property name="username" value="xrrkyrcbtwrbpy"/>
 		<property name="password" value="49df2f382e8daa178bdc9ca88e1a11e6a08254613951efd0a288894fda70788c"/>
+		
 	</bean>
 
 	<!-- Cấu hình đối tượng productDAO sử dụng trong controller -->
