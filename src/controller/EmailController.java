@@ -90,10 +90,6 @@ public class EmailController {
         prop.put("mail.smtp.port", "587"); // default port 25
         prop.put("mail.smtp.starttls.enable", "true");
 		
-		
-		
-
-        
     
         Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
 
@@ -101,9 +97,6 @@ public class EmailController {
                 return new PasswordAuthentication(USERNAME, PASSWORD);
             }
         });
-        
-        
-
 
         Message msg = new MimeMessage(session);
 
@@ -127,16 +120,13 @@ public class EmailController {
             msg.setText(EMAIL_TEXT + "\r\n" + "from " + CONTACT + " / " + EMAIL_FROM );
 
             msg.setSentDate(new Date());
-            
-            
+
 			// Get SMTPTransport
             SMTPTransport t =  (SMTPTransport) session.getTransport("smtp");
-            
-            
+         
 			// connect
             t.connect(SMTP_SERVER, USERNAME, PASSWORD);
-            
-            
+   
 			// send
             t.sendMessage(msg, msg.getAllRecipients());
 

@@ -4,11 +4,8 @@ import java.util.List;
 
 import entity.Product;
 
-
-
 public interface ProductDAO {
 
-	
 	public List<Product> selectAll();
 
 	public Product selectById(int id);

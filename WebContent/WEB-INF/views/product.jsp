@@ -130,7 +130,7 @@ table, th, td {
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Title Tag  -->
-<title>Eshop - eCommerce HTML5 Template.</title>
+<title>Lukashop</title>
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="images/favicon.png">
 <!-- Web Font -->
@@ -174,7 +174,8 @@ table, th, td {
 <!-- Eshop StyleSheet -->
 <link rel="stylesheet"
 	href="<c:url value="/views/css/reset.css"></c:url>">
-<link rel="stylesheet" href="<c:url value="/views/style.css"></c:url>">
+<link rel="stylesheet" 
+	href="<c:url value="/views/style.css"></c:url>">
 <link rel="stylesheet"
 	href="<c:url value="/views/css/responsive.css"></c:url>">
 
@@ -324,7 +325,7 @@ table, th, td {
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
-							<h4>Get In Tuch</h4>
+							<h4>Liên hệ</h4>
 							<!-- Single Widget -->
 							<div class="contact">
 								<ul>

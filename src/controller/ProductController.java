@@ -151,8 +151,6 @@ public class ProductController {
 	public String update(@Valid @ModelAttribute Product s, BindingResult result, Model m, HttpServletRequest request) {
 		List<Product> list = productDAO.selectAll();
 		
-		
-		
 		String oldfilename = null;
 		ServletFileUpload sfu = new ServletFileUpload(new DiskFileItemFactory());
 		try {

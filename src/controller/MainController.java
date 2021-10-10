@@ -34,10 +34,6 @@ public class MainController {
 		this.productDAO = productDAO;
 	}
 	
-
-
-
-	
 	@RequestMapping("/adminlogin")
 	public String adminlogin(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
 		
@@ -71,7 +67,6 @@ public class MainController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
-		
 	return "redirect:/";
 	}*/
 	
@@ -86,7 +81,6 @@ public class MainController {
 	public String index(Model m, HttpServletRequest request, HttpServletResponse response, CookieLocaleResolver clr) {	
 		
 		request.getSession().setAttribute("system_name", "Welcome to ShopLuKa");
-		
 
 		List<Product> list = productDAO.selectAll();
 		
@@ -110,8 +104,7 @@ public class MainController {
 //				}
 //			}
 //		}
-		
-		
+
 		
 //		Properties prop = new Properties();
 //		InputStream input = null;
@@ -143,11 +136,8 @@ public class MainController {
 //			}
 //		}
 		
-		
 		m.addAttribute("list", list);
-		
-		
-		
+
 	return "index";	
 }
 }

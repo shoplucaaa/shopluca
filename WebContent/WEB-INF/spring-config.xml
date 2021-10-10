@@ -5,14 +5,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="
-   http://www.springframework.org/schema/beans     
-   http://www.springframework.org/schema/beans/spring-beans.xsd
-   http://www.springframework.org/schema/context 
-   http://www.springframework.org/schema/context/spring-context.xsd
-              http://www.springframework.org/schema/util 
-   		   http://www.springframework.org/schema/util/spring-util.xsd
-   http://www.springframework.org/schema/mvc 
-   http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	http://www.springframework.org/schema/beans     
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- Cài đặt resource I18N -->
 	<bean id="validateSource"
@@ -20,6 +20,7 @@
 		<property name="basename" value="classpath:validate" />
 		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
+	
 	<!-- Cài đặt resource message cho validator -->
 	<bean id="validator"
 		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
@@ -94,32 +95,28 @@
 
 <!-- 	Khai báo thuộc tính cài đặt cho thư viện Hibernate -->
 	<bean id="sessionFactory"
-	class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-	<property name="dataSource" ref="dataSource" />
-	<property name="packagesToScan" value="entity" />
-	<property name="hibernateProperties">
-	<props>
-	<prop key="hibernate.connection.pool_size">1</prop>
-	<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
-	<prop key="hibernate.current_session_context_class">thread</prop>
-	<prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop>
-	<prop key="hibernate.show_sql">true</prop>
-	</props>
-	</property>
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="entity" />
+		<property name="hibernateProperties">
+			<props>
+			<prop key="hibernate.connection.pool_size">1</prop>
+			<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+			<prop key="hibernate.current_session_context_class">thread</prop>
+			<prop key="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop>
+			<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
 	</bean>
 
 
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-	<property name="driverClassName"
-	value="org.postgresql.Driver"/>
-	<property name="url" value="jdbc:postgresql://ec2-107-20-104-234.compute-1.amazonaws.com:5432/d3oikn5k0298sq?sslmode=require"/>
-	<property name="username" value="xrrkyrcbtwrbpy"/>
-	<property name="password" value="49df2f382e8daa178bdc9ca88e1a11e6a08254613951efd0a288894fda70788c"/>
+		<property name="driverClassName" value="org.postgresql.Driver"/>
+		<property name="url" value="jdbc:postgresql://ec2-107-20-104-234.compute-1.amazonaws.com:5432/d3oikn5k0298sq?sslmode=require"/>
+		<property name="username" value="xrrkyrcbtwrbpy"/>
+		<property name="password" value="49df2f382e8daa178bdc9ca88e1a11e6a08254613951efd0a288894fda70788c"/>
 	</bean>
-
-
-
 
 
 	<!-- Cấu hình đối tượng productDAO sử dụng trong controller -->
@@ -129,12 +126,10 @@
 
 	<mvc:resources mapping="/public/**" location="/public/"></mvc:resources>
 
-	<mvc:resources mapping="/views/**"
-		location="/WEB-INF/views/"></mvc:resources>
+	<mvc:resources mapping="/views/**" location="/WEB-INF/views/"></mvc:resources>
 
 	<!-- Khai báo package chứa các controller (điều hướng) -->
-	<context:component-scan
-		base-package="controller" />
+	<context:component-scan base-package="controller" />
 
 	<!-- Khai báo thư mục view (file web jsp) phụ trách hiển thị -->
 	<bean

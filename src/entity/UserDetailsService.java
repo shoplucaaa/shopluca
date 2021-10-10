@@ -32,12 +32,9 @@ public class UserDetailsService implements org.springframework.security.core.use
 					String pas = encoder.encode(System.getenv("password"));
 					System.out.println(pas);
 //					String encoded = new BCryptPasswordEncoder().encode(userRow[1]);
-
 					System.out.println(System.getenv("username"));
 //					String pas1 = encoder.encode("password");
-					
 
-					
 					return new User(System.getenv("username"), pas, AuthorityUtils.createAuthorityList(System.getenv("role")));
 					
 					

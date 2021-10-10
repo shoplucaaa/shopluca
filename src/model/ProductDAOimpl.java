@@ -6,16 +6,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import entity.Product;
 
 
 /**
- * Viáº¿t lá»‡nh CRUD cho Ä‘á»‘i tÆ°á»£ng Student TÃ­ch há»£p thÆ° viá»‡n Hibernate >>>
- * SessionFactory KhÃ¡i niá»‡m "chá»�c phá»¥ thuá»™c" >>> cáº¥u hÃ¬nh Ä‘á»‘i tÆ°á»£ng bean trong
- * spring >>> khi cáº§n chá»‰ viá»‡c gá»�i lÃ  dÃ¹ng
  * 
- * @author aaa
+ * @author 
  *
  */
 
@@ -45,8 +41,6 @@ public class ProductDAOimpl implements ProductDAO {
 			e.printStackTrace();
 			ss.close();
 		}
-		
-		
 		return null;
 	}
 
