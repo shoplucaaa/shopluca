@@ -248,12 +248,12 @@
 				</tr>
 
 				<tr>
-					<td style="padding-left:">Tên đăng nhập</td>
+					<td style="padding-left:">Tên đăng nhập (default: admin)</td>
 					<td><input type="text" name="username" id="username"
 						placeholder="Input name" /></td>
 				</tr>
 				<tr>
-					<td>Mật khẩu</td>
+					<td>Mật khẩu (default: password)</td>
 					<td><input type="password" name="password" id="pass"
 						placeholder="Enter Password" /></td>
 				</tr>

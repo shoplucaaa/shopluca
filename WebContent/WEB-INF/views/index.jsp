@@ -123,7 +123,7 @@
 	<section class="hero-slider">
 		<!-- Single Slider -->
 		<div class="single-slider"
-			style="background-image: url(https://designlimitededition.com/wp-content/uploads/2018/08/Most-Expensive-3D-laser-Mouse-in-the-World-9.jpg;)">
+			style="background-image: url(<c:url value="/public/images/Special 0.jpg"> </c:url>;)">
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-lg-9 offset-lg-3 col-12">
@@ -136,7 +136,7 @@
 										</h1>
 										<p>
 											Linh Kiện PC chính hãng, giá rẻ, phục vụ mọi nhu cầu xây dựng cấu hình <br>
-											HANOICOMPUTER có đầy đủ các loại mặt hàng <br> Nhấn để "mua ngay" để xem chi tiết
+											Shopluka có đầy đủ các loại mặt hàng <br> Nhấn để "mua ngay" để xem chi tiết
 										</p>
 										<div class="button">
 											<a href="#productarea" class="btn">Mua ngay!</a>
@@ -161,7 +161,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
 						<img
-							src="https://i.pinimg.com/originals/b1/54/c0/b154c0000fc4d435a6f72ef897696db8.jpg"
+							src="<c:url value="/public/images/Special 1.jpg"> </c:url>"
 							alt="#">
 						<div class="content">
 							<p>Chuột</p>
@@ -177,7 +177,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
 						<img
-							src="https://www.extremetech.com/wp-content/uploads/2020/01/TAE07156_Edit.jpg"
+							src="<c:url value="/public/images/Special 2.png"> </c:url>"
 							alt="#">
 						<div class="content">
 							<p>Bàn phím</p>
@@ -193,7 +193,7 @@
 				<div class="col-lg-4 col-12">
 					<div class="single-banner tab-height">
 						<img
-							src="https://luxurylaunches.com/wp-content/uploads/2020/01/gold-keyboard-2.jpg"
+							src="<c:url value="/public/images/Special 3.jpg"> </c:url>"
 							alt="#">
 						<div class="content">
 							<p>Phụ kiện</p>
@@ -266,8 +266,7 @@
 
 															<div class="product-action-2">
 																<a title="Add to cart" data-toggle="modal"
-																	data-target="#${s.id}" title="Quick View" href="#">Click
-																	for more info</a>
+																	data-target="#${s.id}" title="Quick View" href="#">Nhấn vào để xem chi tiết</a>
 															</div>
 														</div>
 													</div>
@@ -524,7 +523,7 @@
 					<div class="col-lg-6 col-12 padding-right">
 						<div class="image">
 							<img
-								src="https://png.pngtree.com/png-vector/20190116/ourmid/pngtree-vector-clock-icon-png-image_322077.jpg"
+								src="https://cdn.mos.cms.futurecdn.net/ZtftSWBRu5GiPu2F9LetZQ.jpg"
 								alt="#">
 						</div>
 					</div>

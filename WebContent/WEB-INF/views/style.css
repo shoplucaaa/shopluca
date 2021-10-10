@@ -1242,12 +1242,12 @@ Version:1.0
 	font-size: 20px;
 	display: block;
 	margin-bottom: 12px;
-	color: #333;
+	color: #f8f9fa;
 	font-weight: 700;
 	line-height: initial;
 }
 .hero-slider .hero-text p {
-	color: #333;
+	color: #f8f9fa;
 	margin-bottom: 35px;
 }
 .hero-slider .hero-text .button{
@@ -2013,7 +2013,7 @@ Version:1.0
     float:right;
 }
 .single-product .product-content h3 a {
-	font-size: 1.2em;
+	font-size: 0.6 em;
 	font-weight: 500;
 	margin: 0;
 }
@@ -2024,7 +2024,7 @@ Version:1.0
   margin: 6px 0 0 0;
 }
 .single-product .product-content .product-price span {
-	font-size: 1.5em;
+	font-size: 1.1em;
 	font-weight: 500;
 /* 	float: right; */
 }
