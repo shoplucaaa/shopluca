@@ -123,7 +123,7 @@
 	<section class="hero-slider">
 		<!-- Single Slider -->
 		<div class="single-slider"
-			style="background-image:  url(https://cdn.mos.cms.futurecdn.net/HqT3HPGT6JUkTKLw4ryd95.jpg;)">
+			style="background-image:  url(https://cdn.mos.cms.futurecdn.net/HqT3HPGT6JUkTKLw4ryd95.jpg)">
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-lg-9 offset-lg-3 col-12">
@@ -161,7 +161,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
 						<img
-							src="<c:url value="/public/images/Special 2.jpg"> </c:url>"
+							src="<c:url value="/public/images/Special 2.png"> </c:url>"
 							alt="#">
 						<div class="content">
 							<p>Chuột</p>
@@ -177,7 +177,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
 						<img
-							src="<c:url value="/public/images/Special 1.png"> </c:url>"
+							src="<c:url value="/public/images/Special 1.jpg"> </c:url>"
 							alt="#">
 						<div class="content">
 							<p>Bàn phím</p>
