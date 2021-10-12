@@ -603,7 +603,7 @@
 						<div class="inner">
 							<h4>Đăng ký email</h4>
 							<p>
-								Đăng ký bằng email và nhận tới <span>10%</span>  cho đơn hàng đầu tiên
+								Đăng ký bằng email và nhận phiếu giảm giá tới <span>10%</span>  cho đơn hàng đầu tiên
 							</p>
 							<form action="mail/mail.php" method="get" target="_blank"
 								class="newsletter-inner">

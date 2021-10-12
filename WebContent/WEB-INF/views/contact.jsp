@@ -143,46 +143,46 @@
 						<div class="col-lg-8 col-12">
 							<div class="form-main">
 								<div class="title">
-									<h4>Get in touch</h4>
-									<h3>Write us a message</h3>
+									<h4>Liên hệ</h4>
+									<h3>Viết tin nhắn cho chúng tôi dưới đây</h3>
 									<h3 style="color:green;">${msg}</h3>
 								</div>
 								<form class="form" method="post" action="sendemail">
 									<div class="row">
 										<div class="col-lg-6 col-12">
 											<div class="form-group">
-												<label>Your Name<span>*</span></label>
+												<label>Tên<span>*</span></label>
 												<input name="name" type="text" placeholder="">
 											</div>
 										</div>
 										<div class="col-lg-6 col-12">
 											<div class="form-group">
-												<label>Your Subjects<span>*</span></label>
+												<label>Tiêu đề<span>*</span></label>
 												<input name="subject" type="text" placeholder="">
 											</div>
 										</div>
 										<div class="col-lg-6 col-12">
 											<div class="form-group">
-												<label>Your Email<span>*</span></label>
+												<label>Email<span>*</span></label>
 												<input name="email" type="email" placeholder="">
 											</div>	
 										</div>
 										<div class="col-lg-6 col-12">
 											<div class="form-group">
-												<label>Your Phone<span>*</span></label>
+												<label>Số điện thoại<span>*</span></label>
 												<input name="contact" type="text" placeholder="">
 											</div>	
 										</div>
 										<div class="col-12">
 											<div class="form-group message">
-												<label>your message<span>*</span></label>
+												<label>Lời nhắn<span>*</span></label>
 												<textarea name="message" placeholder=""></textarea>
 											</div>
 										</div>
 										<div class="col-12">
 											<div class="form-group button">
-												<button type="submit" class="btn">Send Message</button>
-												<button type="reset" class="btn" style="background-color:red">Reset Message</button>
+												<button type="submit" class="btn">Gửi</button>
+												<button type="reset" class="btn" style="background-color:red">Reset</button>
 											</div>
 										</div>
 									</div>
@@ -193,7 +193,7 @@
 							<div class="single-head">
 								<div class="single-info">
 									<i class="fa fa-phone"></i>
-									<h4 class="title">Call us Now:</h4>
+									<h4 class="title">Số điện thoại:</h4>
 									<ul>
 										<li>+123 456-789-1120</li>
 										<li>+522 672-452-1120</li>
@@ -209,7 +209,7 @@
 								</div>
 								<div class="single-info">
 									<i class="fa fa-location-arrow"></i>
-									<h4 class="title">Our Address:</h4>
+									<h4 class="title">Địa chỉ:</h4>
 									<ul>
 										<li>KA-62/1, Travel Agency, 45 Grand Central Terminal, New York.</li>
 									</ul>
@@ -238,7 +238,7 @@
 						<div class="inner">
 							<h4>Đăng ký email</h4>
 							<p>
-								Đăng ký bằng email và nhận tới <span>10%</span>  cho đơn hàng đầu tiên
+								Đăng ký bằng email và nhận phiếu giảm giá tới <span>10%</span> cho đơn hàng đầu tiên
 							</p>
 							<form action="mail/mail.php" method="get" target="_blank"
 								class="newsletter-inner">
