@@ -57,28 +57,28 @@ public class EmailController {
         Properties prop = System.getProperties();
 
 
-		InputStream input = null;
-		try {
-			String filename = "config.properties";
-			input = EmailController.class.getClassLoader().getResourceAsStream(filename);
-			if (input == null) {
-				System.out.println("Sorry, unable to find " + filename);
-			}
+		// InputStream input = null;
+		// try {
+			// String filename = "config.properties";
+			// input = EmailController.class.getClassLoader().getResourceAsStream(filename);
+			// if (input == null) {
+				// System.out.println("Sorry, unable to find " + filename);
+			// }
 
-			// load a properties file from class path, inside static method
-			prop.load(input);
+			// // load a properties file from class path, inside static method
+			// prop.load(input);
 
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		} finally {
-			if (input != null) {
-				try {
-					input.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
+		// } catch (IOException ex) {
+			// ex.printStackTrace();
+		// } finally {
+			// if (input != null) {
+				// try {
+					// input.close();
+				// } catch (IOException e) {
+					// e.printStackTrace();
+				// }
+			// }
+		// }
 		
 		
 //		   String SMTP_SERVER = "smtp.gmail.com";
